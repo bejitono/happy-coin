@@ -28,6 +28,11 @@
 		3D7BA86325CE23FE0087D9BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA86225CE23FE0087D9BB /* Preview Assets.xcassets */; };
 		3D7BA86E25CE23FF0087D9BB /* HappyCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA86D25CE23FF0087D9BB /* HappyCoinTests.swift */; };
 		3D7BA87925CE23FF0087D9BB /* HappyCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA87825CE23FF0087D9BB /* HappyCoinUITests.swift */; };
+		3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */; };
+		3D9C6AC025CE50E000D45BDC /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABB25CE50E000D45BDC /* KeypadView.swift */; };
+		3D9C6AC125CE50E000D45BDC /* KeypadDigitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABC25CE50E000D45BDC /* KeypadDigitView.swift */; };
+		3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */; };
+		3D9C6AC325CE50E000D45BDC /* KeypadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		3D7BA87425CE23FF0087D9BB /* HappyCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7BA87825CE23FF0087D9BB /* HappyCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyCoinUITests.swift; sourceTree = "<group>"; };
 		3D7BA87A25CE23FF0087D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadStringView.swift; sourceTree = "<group>"; };
+		3D9C6ABB25CE50E000D45BDC /* KeypadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
+		3D9C6ABC25CE50E000D45BDC /* KeypadDigitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadDigitView.swift; sourceTree = "<group>"; };
+		3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +210,7 @@
 				3D3A963825CE293C00BD0642 /* Models */,
 				3D3A966725CE3E0200BD0642 /* Modules */,
 				3D3A965025CE296700BD0642 /* Service */,
+				3D9C6AB825CE50D000D45BDC /* Views */,
 				3D7BA86125CE23FE0087D9BB /* Preview Content */,
 			);
 			path = HappyCoin;
@@ -229,6 +240,26 @@
 				3D7BA87A25CE23FF0087D9BB /* Info.plist */,
 			);
 			path = HappyCoinUITests;
+			sourceTree = "<group>";
+		};
+		3D9C6AB825CE50D000D45BDC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D9C6AB925CE50E000D45BDC /* Keyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D9C6AB925CE50E000D45BDC /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */,
+				3D9C6ABB25CE50E000D45BDC /* KeypadView.swift */,
+				3D9C6ABC25CE50E000D45BDC /* KeypadDigitView.swift */,
+				3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */,
+				3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +394,10 @@
 				3D3A965425CE296700BD0642 /* PortfolioService.swift in Sources */,
 				3D3A963425CE292200BD0642 /* PortfolioView.swift in Sources */,
 				3D7BA85C25CE23FC0087D9BB /* HappyCoinApp.swift in Sources */,
+				3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */,
+				3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */,
 				3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */,
+				3D9C6AC025CE50E000D45BDC /* KeypadView.swift in Sources */,
 				3D3A964625CE293C00BD0642 /* BlazeError.swift in Sources */,
 				3D3A966D25CE408F00BD0642 /* CoinListView.swift in Sources */,
 				3D3A967C25CE42FF00BD0642 /* CoinService.swift in Sources */,
@@ -372,6 +406,8 @@
 				3D3A962E25CE292200BD0642 /* PortfolioBalanceViewModel.swift in Sources */,
 				3D3A962F25CE292200BD0642 /* PortfolioBalanceView.swift in Sources */,
 				3D3A962D25CE292200BD0642 /* PortfolioListItemViewModel.swift in Sources */,
+				3D9C6AC125CE50E000D45BDC /* KeypadDigitView.swift in Sources */,
+				3D9C6AC325CE50E000D45BDC /* KeypadImageView.swift in Sources */,
 				3D3A963225CE292200BD0642 /* PortfolioBuilder.swift in Sources */,
 				3D3A963325CE292200BD0642 /* PortfolioListViewModel.swift in Sources */,
 				3D3A963025CE292200BD0642 /* PortfolioViewModel.swift in Sources */,

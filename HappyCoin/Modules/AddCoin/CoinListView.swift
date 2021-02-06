@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoinListView: View {
     
-    var viewModel: CoinListViewModel
+    let viewModel: CoinListViewModel
     
     init(viewModel: CoinListViewModel) {
         self.viewModel = viewModel
