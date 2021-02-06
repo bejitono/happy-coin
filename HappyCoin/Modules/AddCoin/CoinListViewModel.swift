@@ -7,9 +7,9 @@
 
 import Combine
 
-final class CoinListViewModel {
+final class CoinListViewModel: ObservableObject {
     
-    var items: [CoinListItemViewModel] = []
+    @Published var items: [CoinListItemViewModel] = []
         
     private let service: CoinService
     private var disposables = Set<AnyCancellable>()

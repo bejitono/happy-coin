@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PortfolioView: View {
     
-    @ObservedObject var viewModel: PortfolioViewModel
+    @ObservedObject private var viewModel: PortfolioViewModel
+    @State private var presentingModal = false
     
     init(viewModel: PortfolioViewModel) {
         self.viewModel = viewModel
@@ -24,7 +25,7 @@ struct PortfolioView: View {
             VStack {
                 Spacer()
                 Button(action: {
-                    print("Edit button was tapped")
+                    self.presentingModal = true
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -36,6 +37,15 @@ struct PortfolioView: View {
                             RoundedRectangle(cornerRadius: .addButtonSize / 2)
                                 .stroke(Color.white, lineWidth: .buttonLine)
                         )
+                        .shadow(
+                            color: .gray,
+                            radius: .cornerRadius,
+                            x: .shadowXOffset,
+                            y: .shadowYOffset
+                        )
+                }
+                .sheet(isPresented: $presentingModal) {
+                    AddCoinBuilder.coinListView()
                 }
             }
         }
@@ -45,9 +55,12 @@ struct PortfolioView: View {
 // MARK: - Constants
 
 private extension CGFloat {
+    static let cornerRadius: CGFloat = addButtonSize / 2
+    static let shadowYOffset: CGFloat = 10
+    static let shadowXOffset: CGFloat = 0
     static let spacing: CGFloat = 45
     static let addButtonSize: CGFloat = 60
-    static let buttonLine: CGFloat = 6
+    static let buttonLine: CGFloat = 4
 }
 
 // MARK: - Previews

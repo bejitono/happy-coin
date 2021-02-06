@@ -33,6 +33,7 @@
 		3D9C6AC125CE50E000D45BDC /* KeypadDigitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABC25CE50E000D45BDC /* KeypadDigitView.swift */; };
 		3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */; };
 		3D9C6AC325CE50E000D45BDC /* KeypadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */; };
+		3D9C6AC825CE546200D45BDC /* AddCoinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		3D9C6ABC25CE50E000D45BDC /* KeypadDigitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadDigitView.swift; sourceTree = "<group>"; };
 		3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadImageView.swift; sourceTree = "<group>"; };
+		3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoinBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				3D3A966C25CE408F00BD0642 /* CoinListView.swift */,
 				3D3A967125CE409500BD0642 /* CoinListViewModel.swift */,
 				3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */,
+				3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */,
 			);
 			path = AddCoin;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				3D3A963425CE292200BD0642 /* PortfolioView.swift in Sources */,
 				3D7BA85C25CE23FC0087D9BB /* HappyCoinApp.swift in Sources */,
 				3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */,
+				3D9C6AC825CE546200D45BDC /* AddCoinBuilder.swift in Sources */,
 				3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */,
 				3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */,
 				3D9C6AC025CE50E000D45BDC /* KeypadView.swift in Sources */,
