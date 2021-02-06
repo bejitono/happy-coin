@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D3A962D25CE292200BD0642 /* PortfolioListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962525CE292200BD0642 /* PortfolioListItemViewModel.swift */; };
+		3D3A962E25CE292200BD0642 /* PortfolioBalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962625CE292200BD0642 /* PortfolioBalanceViewModel.swift */; };
+		3D3A962F25CE292200BD0642 /* PortfolioBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962725CE292200BD0642 /* PortfolioBalanceView.swift */; };
+		3D3A963025CE292200BD0642 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962825CE292200BD0642 /* PortfolioViewModel.swift */; };
+		3D3A963125CE292200BD0642 /* PortfolioListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962925CE292200BD0642 /* PortfolioListView.swift */; };
+		3D3A963225CE292200BD0642 /* PortfolioBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962A25CE292200BD0642 /* PortfolioBuilder.swift */; };
+		3D3A963325CE292200BD0642 /* PortfolioListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962B25CE292200BD0642 /* PortfolioListViewModel.swift */; };
+		3D3A963425CE292200BD0642 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A962C25CE292200BD0642 /* PortfolioView.swift */; };
+		3D3A964225CE293C00BD0642 /* PortfolioResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A963C25CE293C00BD0642 /* PortfolioResponse.swift */; };
+		3D3A964625CE293C00BD0642 /* BlazeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A964025CE293C00BD0642 /* BlazeError.swift */; };
+		3D3A965425CE296700BD0642 /* PortfolioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A965225CE296700BD0642 /* PortfolioService.swift */; };
+		3D3A966D25CE408F00BD0642 /* CoinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A966C25CE408F00BD0642 /* CoinListView.swift */; };
+		3D3A967225CE409500BD0642 /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A967125CE409500BD0642 /* CoinListViewModel.swift */; };
+		3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */; };
+		3D3A967C25CE42FF00BD0642 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A967B25CE42FF00BD0642 /* CoinService.swift */; };
+		3D3A968425CE459800BD0642 /* CoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A968325CE459800BD0642 /* CoinResponse.swift */; };
+		3D7BA85C25CE23FC0087D9BB /* HappyCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA85B25CE23FC0087D9BB /* HappyCoinApp.swift */; };
+		3D7BA86025CE23FE0087D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA85F25CE23FE0087D9BB /* Assets.xcassets */; };
+		3D7BA86325CE23FE0087D9BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA86225CE23FE0087D9BB /* Preview Assets.xcassets */; };
+		3D7BA86E25CE23FF0087D9BB /* HappyCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA86D25CE23FF0087D9BB /* HappyCoinTests.swift */; };
+		3D7BA87925CE23FF0087D9BB /* HappyCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA87825CE23FF0087D9BB /* HappyCoinUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D7BA86A25CE23FF0087D9BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D7BA85025CE23FC0087D9BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D7BA85725CE23FC0087D9BB;
+			remoteInfo = HappyCoin;
+		};
+		3D7BA87525CE23FF0087D9BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D7BA85025CE23FC0087D9BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D7BA85725CE23FC0087D9BB;
+			remoteInfo = HappyCoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D3A962525CE292200BD0642 /* PortfolioListItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioListItemViewModel.swift; sourceTree = "<group>"; };
+		3D3A962625CE292200BD0642 /* PortfolioBalanceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioBalanceViewModel.swift; sourceTree = "<group>"; };
+		3D3A962725CE292200BD0642 /* PortfolioBalanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioBalanceView.swift; sourceTree = "<group>"; };
+		3D3A962825CE292200BD0642 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		3D3A962925CE292200BD0642 /* PortfolioListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioListView.swift; sourceTree = "<group>"; };
+		3D3A962A25CE292200BD0642 /* PortfolioBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioBuilder.swift; sourceTree = "<group>"; };
+		3D3A962B25CE292200BD0642 /* PortfolioListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioListViewModel.swift; sourceTree = "<group>"; };
+		3D3A962C25CE292200BD0642 /* PortfolioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		3D3A963C25CE293C00BD0642 /* PortfolioResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioResponse.swift; sourceTree = "<group>"; };
+		3D3A964025CE293C00BD0642 /* BlazeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlazeError.swift; sourceTree = "<group>"; };
+		3D3A965225CE296700BD0642 /* PortfolioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioService.swift; sourceTree = "<group>"; };
+		3D3A966C25CE408F00BD0642 /* CoinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView.swift; sourceTree = "<group>"; };
+		3D3A967125CE409500BD0642 /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
+		3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListItemViewModel.swift; sourceTree = "<group>"; };
+		3D3A967B25CE42FF00BD0642 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
+		3D3A968325CE459800BD0642 /* CoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinResponse.swift; sourceTree = "<group>"; };
+		3D7BA85825CE23FC0087D9BB /* HappyCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7BA85B25CE23FC0087D9BB /* HappyCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyCoinApp.swift; sourceTree = "<group>"; };
+		3D7BA85F25CE23FE0087D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D7BA86225CE23FE0087D9BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3D7BA86425CE23FE0087D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7BA86925CE23FF0087D9BB /* HappyCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7BA86D25CE23FF0087D9BB /* HappyCoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyCoinTests.swift; sourceTree = "<group>"; };
+		3D7BA86F25CE23FF0087D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7BA87425CE23FF0087D9BB /* HappyCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7BA87825CE23FF0087D9BB /* HappyCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyCoinUITests.swift; sourceTree = "<group>"; };
+		3D7BA87A25CE23FF0087D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D7BA85525CE23FC0087D9BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7BA86625CE23FF0087D9BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7BA87125CE23FF0087D9BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D3A962425CE292200BD0642 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A962A25CE292200BD0642 /* PortfolioBuilder.swift */,
+				3D3A962525CE292200BD0642 /* PortfolioListItemViewModel.swift */,
+				3D3A962625CE292200BD0642 /* PortfolioBalanceViewModel.swift */,
+				3D3A962725CE292200BD0642 /* PortfolioBalanceView.swift */,
+				3D3A962B25CE292200BD0642 /* PortfolioListViewModel.swift */,
+				3D3A962925CE292200BD0642 /* PortfolioListView.swift */,
+				3D3A962825CE292200BD0642 /* PortfolioViewModel.swift */,
+				3D3A962C25CE292200BD0642 /* PortfolioView.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		3D3A963825CE293C00BD0642 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A963925CE293C00BD0642 /* Network */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D3A963925CE293C00BD0642 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A963B25CE293C00BD0642 /* ResponseModels */,
+				3D3A964025CE293C00BD0642 /* BlazeError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3D3A963B25CE293C00BD0642 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A963C25CE293C00BD0642 /* PortfolioResponse.swift */,
+				3D3A968325CE459800BD0642 /* CoinResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		3D3A965025CE296700BD0642 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A967B25CE42FF00BD0642 /* CoinService.swift */,
+				3D3A965225CE296700BD0642 /* PortfolioService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3D3A966725CE3E0200BD0642 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A966825CE3E1100BD0642 /* AddCoin */,
+				3D3A962425CE292200BD0642 /* Portfolio */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3D3A966825CE3E1100BD0642 /* AddCoin */ = {
+			isa = PBXGroup;
+			children = (
+				3D3A966C25CE408F00BD0642 /* CoinListView.swift */,
+				3D3A967125CE409500BD0642 /* CoinListViewModel.swift */,
+				3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */,
+			);
+			path = AddCoin;
+			sourceTree = "<group>";
+		};
+		3D7BA84F25CE23FC0087D9BB = {
+			isa = PBXGroup;
+			children = (
+				3D7BA85A25CE23FC0087D9BB /* HappyCoin */,
+				3D7BA86C25CE23FF0087D9BB /* HappyCoinTests */,
+				3D7BA87725CE23FF0087D9BB /* HappyCoinUITests */,
+				3D7BA85925CE23FC0087D9BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D7BA85925CE23FC0087D9BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D7BA85825CE23FC0087D9BB /* HappyCoin.app */,
+				3D7BA86925CE23FF0087D9BB /* HappyCoinTests.xctest */,
+				3D7BA87425CE23FF0087D9BB /* HappyCoinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D7BA85A25CE23FC0087D9BB /* HappyCoin */ = {
+			isa = PBXGroup;
+			children = (
+				3D7BA85B25CE23FC0087D9BB /* HappyCoinApp.swift */,
+				3D7BA85F25CE23FE0087D9BB /* Assets.xcassets */,
+				3D7BA86425CE23FE0087D9BB /* Info.plist */,
+				3D3A963825CE293C00BD0642 /* Models */,
+				3D3A966725CE3E0200BD0642 /* Modules */,
+				3D3A965025CE296700BD0642 /* Service */,
+				3D7BA86125CE23FE0087D9BB /* Preview Content */,
+			);
+			path = HappyCoin;
+			sourceTree = "<group>";
+		};
+		3D7BA86125CE23FE0087D9BB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3D7BA86225CE23FE0087D9BB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3D7BA86C25CE23FF0087D9BB /* HappyCoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D7BA86D25CE23FF0087D9BB /* HappyCoinTests.swift */,
+				3D7BA86F25CE23FF0087D9BB /* Info.plist */,
+			);
+			path = HappyCoinTests;
+			sourceTree = "<group>";
+		};
+		3D7BA87725CE23FF0087D9BB /* HappyCoinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D7BA87825CE23FF0087D9BB /* HappyCoinUITests.swift */,
+				3D7BA87A25CE23FF0087D9BB /* Info.plist */,
+			);
+			path = HappyCoinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D7BA85725CE23FC0087D9BB /* HappyCoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7BA87D25CE23FF0087D9BB /* Build configuration list for PBXNativeTarget "HappyCoin" */;
+			buildPhases = (
+				3D7BA85425CE23FC0087D9BB /* Sources */,
+				3D7BA85525CE23FC0087D9BB /* Frameworks */,
+				3D7BA85625CE23FC0087D9BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyCoin;
+			productName = HappyCoin;
+			productReference = 3D7BA85825CE23FC0087D9BB /* HappyCoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D7BA86825CE23FF0087D9BB /* HappyCoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7BA88025CE23FF0087D9BB /* Build configuration list for PBXNativeTarget "HappyCoinTests" */;
+			buildPhases = (
+				3D7BA86525CE23FF0087D9BB /* Sources */,
+				3D7BA86625CE23FF0087D9BB /* Frameworks */,
+				3D7BA86725CE23FF0087D9BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D7BA86B25CE23FF0087D9BB /* PBXTargetDependency */,
+			);
+			name = HappyCoinTests;
+			productName = HappyCoinTests;
+			productReference = 3D7BA86925CE23FF0087D9BB /* HappyCoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D7BA87325CE23FF0087D9BB /* HappyCoinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7BA88325CE23FF0087D9BB /* Build configuration list for PBXNativeTarget "HappyCoinUITests" */;
+			buildPhases = (
+				3D7BA87025CE23FF0087D9BB /* Sources */,
+				3D7BA87125CE23FF0087D9BB /* Frameworks */,
+				3D7BA87225CE23FF0087D9BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D7BA87625CE23FF0087D9BB /* PBXTargetDependency */,
+			);
+			name = HappyCoinUITests;
+			productName = HappyCoinUITests;
+			productReference = 3D7BA87425CE23FF0087D9BB /* HappyCoinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D7BA85025CE23FC0087D9BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					3D7BA85725CE23FC0087D9BB = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					3D7BA86825CE23FF0087D9BB = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 3D7BA85725CE23FC0087D9BB;
+					};
+					3D7BA87325CE23FF0087D9BB = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 3D7BA85725CE23FC0087D9BB;
+					};
+				};
+			};
+			buildConfigurationList = 3D7BA85325CE23FC0087D9BB /* Build configuration list for PBXProject "HappyCoin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D7BA84F25CE23FC0087D9BB;
+			productRefGroup = 3D7BA85925CE23FC0087D9BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D7BA85725CE23FC0087D9BB /* HappyCoin */,
+				3D7BA86825CE23FF0087D9BB /* HappyCoinTests */,
+				3D7BA87325CE23FF0087D9BB /* HappyCoinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D7BA85625CE23FC0087D9BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7BA86325CE23FE0087D9BB /* Preview Assets.xcassets in Resources */,
+				3D7BA86025CE23FE0087D9BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7BA86725CE23FF0087D9BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7BA87225CE23FF0087D9BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D7BA85425CE23FC0087D9BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3A965425CE296700BD0642 /* PortfolioService.swift in Sources */,
+				3D3A963425CE292200BD0642 /* PortfolioView.swift in Sources */,
+				3D7BA85C25CE23FC0087D9BB /* HappyCoinApp.swift in Sources */,
+				3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */,
+				3D3A964625CE293C00BD0642 /* BlazeError.swift in Sources */,
+				3D3A966D25CE408F00BD0642 /* CoinListView.swift in Sources */,
+				3D3A967C25CE42FF00BD0642 /* CoinService.swift in Sources */,
+				3D3A964225CE293C00BD0642 /* PortfolioResponse.swift in Sources */,
+				3D3A963125CE292200BD0642 /* PortfolioListView.swift in Sources */,
+				3D3A962E25CE292200BD0642 /* PortfolioBalanceViewModel.swift in Sources */,
+				3D3A962F25CE292200BD0642 /* PortfolioBalanceView.swift in Sources */,
+				3D3A962D25CE292200BD0642 /* PortfolioListItemViewModel.swift in Sources */,
+				3D3A963225CE292200BD0642 /* PortfolioBuilder.swift in Sources */,
+				3D3A963325CE292200BD0642 /* PortfolioListViewModel.swift in Sources */,
+				3D3A963025CE292200BD0642 /* PortfolioViewModel.swift in Sources */,
+				3D3A968425CE459800BD0642 /* CoinResponse.swift in Sources */,
+				3D3A967225CE409500BD0642 /* CoinListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7BA86525CE23FF0087D9BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7BA86E25CE23FF0087D9BB /* HappyCoinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7BA87025CE23FF0087D9BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D7BA87925CE23FF0087D9BB /* HappyCoinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D7BA86B25CE23FF0087D9BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D7BA85725CE23FC0087D9BB /* HappyCoin */;
+			targetProxy = 3D7BA86A25CE23FF0087D9BB /* PBXContainerItemProxy */;
+		};
+		3D7BA87625CE23FF0087D9BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D7BA85725CE23FC0087D9BB /* HappyCoin */;
+			targetProxy = 3D7BA87525CE23FF0087D9BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3D7BA87B25CE23FF0087D9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D7BA87C25CE23FF0087D9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D7BA87E25CE23FF0087D9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HappyCoin/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HappyCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D7BA87F25CE23FF0087D9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HappyCoin/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HappyCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D7BA88125CE23FF0087D9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyCoinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyCoin.app/HappyCoin";
+			};
+			name = Debug;
+		};
+		3D7BA88225CE23FF0087D9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyCoinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyCoin.app/HappyCoin";
+			};
+			name = Release;
+		};
+		3D7BA88425CE23FF0087D9BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyCoinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HappyCoin;
+			};
+			name = Debug;
+		};
+		3D7BA88525CE23FF0087D9BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HappyCoinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HappyCoin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D7BA85325CE23FC0087D9BB /* Build configuration list for PBXProject "HappyCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7BA87B25CE23FF0087D9BB /* Debug */,
+				3D7BA87C25CE23FF0087D9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D7BA87D25CE23FF0087D9BB /* Build configuration list for PBXNativeTarget "HappyCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7BA87E25CE23FF0087D9BB /* Debug */,
+				3D7BA87F25CE23FF0087D9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D7BA88025CE23FF0087D9BB /* Build configuration list for PBXNativeTarget "HappyCoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7BA88125CE23FF0087D9BB /* Debug */,
+				3D7BA88225CE23FF0087D9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D7BA88325CE23FF0087D9BB /* Build configuration list for PBXNativeTarget "HappyCoinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7BA88425CE23FF0087D9BB /* Debug */,
+				3D7BA88525CE23FF0087D9BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D7BA85025CE23FC0087D9BB /* Project object */;
+}
