@@ -13,4 +13,12 @@ struct AddCoinBuilder {
         let viewModel = CoinListViewModel(service: CoinService())
         return CoinListView(viewModel: viewModel)
     }
+    
+    static func coinAmountInputView(symbol: String) -> some View {
+        let viewModel = CoinAmountInputViewModel(
+            symbol: symbol,
+            service: CoinService()
+        )
+        return CoinAmountInputView(viewModel: viewModel)
+    }
 }
