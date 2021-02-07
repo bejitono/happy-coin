@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,14 @@
 		3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */; };
 		3D9C6AC325CE50E000D45BDC /* KeypadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */; };
 		3D9C6AC825CE546200D45BDC /* AddCoinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */; };
+		3D9C6AD025CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ACF25CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift */; };
+		3D9C6AD625CF8B0200D45BDC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D9C6AD525CF8B0200D45BDC /* Alamofire */; };
+		3DFA7C9A25CFAF25003D76CF /* CoinAmountInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA7C9925CFAF25003D76CF /* CoinAmountInputView.swift */; };
+		3DFA7C9F25CFEAC5003D76CF /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA7C9E25CFEAC5003D76CF /* AmountView.swift */; };
+		3DFA7CA425CFEEC2003D76CF /* AmountTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA7CA325CFEEC2003D76CF /* AmountTitleView.swift */; };
+		3DFA7CA925D01C57003D76CF /* CoinAmountInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA7CA825D01C57003D76CF /* CoinAmountInputViewModel.swift */; };
+		3DFA7CAF25D01CF3003D76CF /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA7CAE25D01CF3003D76CF /* Coin.swift */; };
+		3DFA7CB725D02C68003D76CF /* CoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFA7CB625D02C68003D76CF /* CoinButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +95,13 @@
 		3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadImageView.swift; sourceTree = "<group>"; };
 		3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoinBuilder.swift; sourceTree = "<group>"; };
+		3D9C6ACF25CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardView+UIViewControllerRepresentable.swift"; sourceTree = "<group>"; };
+		3DFA7C9925CFAF25003D76CF /* CoinAmountInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAmountInputView.swift; sourceTree = "<group>"; };
+		3DFA7C9E25CFEAC5003D76CF /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		3DFA7CA325CFEEC2003D76CF /* AmountTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountTitleView.swift; sourceTree = "<group>"; };
+		3DFA7CA825D01C57003D76CF /* CoinAmountInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinAmountInputViewModel.swift; sourceTree = "<group>"; };
+		3DFA7CAE25D01CF3003D76CF /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		3DFA7CB625D02C68003D76CF /* CoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D9C6AD625CF8B0200D45BDC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +148,7 @@
 		3D3A963825CE293C00BD0642 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3DFA7CAD25D01CC5003D76CF /* Domain */,
 				3D3A963925CE293C00BD0642 /* Network */,
 			);
 			path = Models;
@@ -176,10 +193,12 @@
 		3D3A966825CE3E1100BD0642 /* AddCoin */ = {
 			isa = PBXGroup;
 			children = (
+				3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */,
 				3D3A966C25CE408F00BD0642 /* CoinListView.swift */,
 				3D3A967125CE409500BD0642 /* CoinListViewModel.swift */,
 				3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */,
-				3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */,
+				3DFA7C9925CFAF25003D76CF /* CoinAmountInputView.swift */,
+				3DFA7CA825D01C57003D76CF /* CoinAmountInputViewModel.swift */,
 			);
 			path = AddCoin;
 			sourceTree = "<group>";
@@ -249,6 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				3D9C6AB925CE50E000D45BDC /* Keyboard */,
+				3DFA7C9E25CFEAC5003D76CF /* AmountView.swift */,
+				3DFA7CA325CFEEC2003D76CF /* AmountTitleView.swift */,
+				3DFA7CB625D02C68003D76CF /* CoinButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,8 +283,17 @@
 				3D9C6ABC25CE50E000D45BDC /* KeypadDigitView.swift */,
 				3D9C6ABD25CE50E000D45BDC /* KeyboardViewController.swift */,
 				3D9C6ABE25CE50E000D45BDC /* KeypadImageView.swift */,
+				3D9C6ACF25CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		3DFA7CAD25D01CC5003D76CF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3DFA7CAE25D01CF3003D76CF /* Coin.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +312,9 @@
 			dependencies = (
 			);
 			name = HappyCoin;
+			packageProductDependencies = (
+				3D9C6AD525CF8B0200D45BDC /* Alamofire */,
+			);
 			productName = HappyCoin;
 			productReference = 3D7BA85825CE23FC0087D9BB /* HappyCoin.app */;
 			productType = "com.apple.product-type.application";
@@ -352,6 +386,9 @@
 				Base,
 			);
 			mainGroup = 3D7BA84F25CE23FC0087D9BB;
+			packageReferences = (
+				3D9C6AD425CF8B0200D45BDC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3D7BA85925CE23FC0087D9BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -400,22 +437,29 @@
 				3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */,
 				3D9C6AC825CE546200D45BDC /* AddCoinBuilder.swift in Sources */,
 				3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */,
+				3DFA7CB725D02C68003D76CF /* CoinButton.swift in Sources */,
 				3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */,
 				3D9C6AC025CE50E000D45BDC /* KeypadView.swift in Sources */,
 				3D3A964625CE293C00BD0642 /* BlazeError.swift in Sources */,
 				3D3A966D25CE408F00BD0642 /* CoinListView.swift in Sources */,
 				3D3A967C25CE42FF00BD0642 /* CoinService.swift in Sources */,
+				3D9C6AD025CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift in Sources */,
 				3D3A964225CE293C00BD0642 /* PortfolioResponse.swift in Sources */,
 				3D3A963125CE292200BD0642 /* PortfolioListView.swift in Sources */,
 				3D3A962E25CE292200BD0642 /* PortfolioBalanceViewModel.swift in Sources */,
+				3DFA7CAF25D01CF3003D76CF /* Coin.swift in Sources */,
 				3D3A962F25CE292200BD0642 /* PortfolioBalanceView.swift in Sources */,
 				3D3A962D25CE292200BD0642 /* PortfolioListItemViewModel.swift in Sources */,
 				3D9C6AC125CE50E000D45BDC /* KeypadDigitView.swift in Sources */,
+				3DFA7C9F25CFEAC5003D76CF /* AmountView.swift in Sources */,
 				3D9C6AC325CE50E000D45BDC /* KeypadImageView.swift in Sources */,
 				3D3A963225CE292200BD0642 /* PortfolioBuilder.swift in Sources */,
 				3D3A963325CE292200BD0642 /* PortfolioListViewModel.swift in Sources */,
 				3D3A963025CE292200BD0642 /* PortfolioViewModel.swift in Sources */,
+				3DFA7C9A25CFAF25003D76CF /* CoinAmountInputView.swift in Sources */,
 				3D3A968425CE459800BD0642 /* CoinResponse.swift in Sources */,
+				3DFA7CA425CFEEC2003D76CF /* AmountTitleView.swift in Sources */,
+				3DFA7CA925D01C57003D76CF /* CoinAmountInputViewModel.swift in Sources */,
 				3D3A967225CE409500BD0642 /* CoinListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,6 +774,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D9C6AD425CF8B0200D45BDC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D9C6AD525CF8B0200D45BDC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D9C6AD425CF8B0200D45BDC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D7BA85025CE23FC0087D9BB /* Project object */;
 }
