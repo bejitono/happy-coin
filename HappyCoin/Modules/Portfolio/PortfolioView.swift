@@ -22,6 +22,7 @@ struct PortfolioView: View {
                 PortfolioBalanceView(viewModel: viewModel.balanceViewModel)
                 PortfolioListView(viewModel: viewModel.listViewModel)
             }
+            .padding(.horizontal)
             VStack {
                 Spacer()
                 Button(action: {
@@ -58,7 +59,7 @@ private extension CGFloat {
     static let cornerRadius: CGFloat = addButtonSize / 2
     static let shadowYOffset: CGFloat = 10
     static let shadowXOffset: CGFloat = 0
-    static let spacing: CGFloat = 45
+    static let spacing: CGFloat = 55
     static let addButtonSize: CGFloat = 60
     static let buttonLine: CGFloat = 4
 }

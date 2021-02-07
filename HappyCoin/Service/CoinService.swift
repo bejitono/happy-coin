@@ -10,6 +10,7 @@ import Foundation
 
 protocol CoinServiceable {
     func fetchCoins() -> AnyPublisher<CoinListResponse, BlazeError>
+    func getCoinFor(symbol: String) -> Coin
 }
 
 final class CoinService {
@@ -24,6 +25,10 @@ extension CoinService: CoinServiceable {
             .receive(on: DispatchQueue.main)
             .setFailureType(to: BlazeError.self)
             .eraseToAnyPublisher()
+    }
+    
+    func getCoinFor(symbol: String) -> Coin {
+        Coin(id: "1", name: "Bitcoin", symbol: "BTC")
     }
 }
 

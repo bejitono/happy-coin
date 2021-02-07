@@ -28,7 +28,7 @@ extension PortfolioService: PortfolioFetchable {
 }
 
 private let data = PortfolioResponse(
-    balance: "$12348942",
+    balance: "$1423",
     valueIncrease: "+$1000000 (+3000%)",
     items: items
 )
