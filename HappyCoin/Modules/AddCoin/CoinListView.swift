@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CoinListView: View {
     
-    @ObservedObject var viewModel: CoinListViewModel
-    
+    @ObservedObject private var viewModel: CoinListViewModel
+        
     init(viewModel: CoinListViewModel) {
         self.viewModel = viewModel
     }
@@ -18,7 +18,7 @@ struct CoinListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.items, id: \.symbol) { coin in
-                NavigationLink(destination: Text("sdf")) {
+                NavigationLink(destination: AddCoinBuilder.coinAmountInputView(symbol: coin.symbol)) {
                     CoinRowView(image: coin.image, name: coin.name)
                 }
             }

@@ -66,7 +66,6 @@ struct PortfolioListView: View {
             }
             .padding(.vertical, .verticalPadding)
         }
-        .padding(.horizontal, .horizontalPadding)
     }
 }
 
@@ -79,5 +78,4 @@ private extension CGFloat {
     static let subtitleSpacing: CGFloat = 8
     static let labelSpacing: CGFloat = 6
     static let verticalPadding: CGFloat = 7
-    static let horizontalPadding: CGFloat = 7
 }
