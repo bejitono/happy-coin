@@ -90,7 +90,7 @@ private extension KeypadView {
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: topAnchor),
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: underlineView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])
     }

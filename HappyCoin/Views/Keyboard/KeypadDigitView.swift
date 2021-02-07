@@ -39,9 +39,15 @@ open class KeypadDigitView: KeypadView {
             digitLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
         ])
         
-        digitLabel.font = UIFont.systemFont(ofSize: 40) // TODO
+        digitLabel.font = UIFont.boldSystemFont(ofSize: 40)
         digitLabel.text = String(digit)
         digitLabel.textColor = .black
         digitLabel.textAlignment = .center
     }
 }
+// MARK: - Constants
+
+private extension CGFloat {
+    static let digitFontSize: CGFloat = 7
+}
+
