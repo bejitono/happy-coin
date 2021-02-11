@@ -7,21 +7,21 @@
 
 import Combine
 
-enum NavigationState: Int {
-    case viewing
-    case navigate
+struct NavigationState {
+    static let viewing = 0
+    static let navigate = 1
 }
 
 final class CoinAmountInputViewModel: ObservableObject {
     
     @Published var coinTitle: String
     @Published var amount: String = "0"
-    @Published var navigationState: Int? = NavigationState.viewing.rawValue
-    let inputPriceTitle: String = "Input Price"
+    @Published var navigationState: Int? = NavigationState.viewing
+    @Published var symbol: String
+    let inputPriceTitle: String = "Next"
         
     private var digits: [String] = []
     private let decimal = "."
-    private let symbol: String
     private let service: CoinService
     private var disposables = Set<AnyCancellable>()
     
@@ -51,7 +51,7 @@ final class CoinAmountInputViewModel: ObservableObject {
     }
     
     func inputPrice() {
-        navigationState = NavigationState.navigate.rawValue
+        navigationState = NavigationState.navigate
     }
 }
 

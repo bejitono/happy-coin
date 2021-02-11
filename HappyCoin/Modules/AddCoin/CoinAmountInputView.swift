@@ -31,8 +31,8 @@ struct CoinAmountInputView: View {
                 deleteHandler: viewModel.deleteDigit
             )
             NavigationLink(
-                destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
-                tag: NavigationState.navigate.rawValue,
+                destination: AddCoinBuilder.priceInputView(symbol: viewModel.symbol),
+                tag: NavigationState.navigate,
                 selection: $viewModel.navigationState,
                 label: {
                     CoinButton(
