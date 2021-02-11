@@ -11,7 +11,7 @@ struct PortfolioBuilder {
     
     static func makeMainView() -> some View {
         let viewModel = PortfolioViewModel(portfolioService: PortfolioService())
-        return PortfolioView(viewModel: viewModel)
+        return PortfolioView(viewModel: viewModel).environmentObject(AppNavigation())
     }
     
     static func makeBalanceView(

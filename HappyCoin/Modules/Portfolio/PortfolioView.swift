@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PortfolioView: View {
     
+    @EnvironmentObject private var navigation: AppNavigation
     @ObservedObject private var viewModel: PortfolioViewModel
-    @State private var presentingModal = false
     
     init(viewModel: PortfolioViewModel) {
         self.viewModel = viewModel
@@ -26,7 +26,7 @@ struct PortfolioView: View {
             VStack {
                 Spacer()
                 Button(action: {
-                    self.presentingModal = true
+                    self.navigation.addCoinSheet.isPresented = true
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -45,7 +45,7 @@ struct PortfolioView: View {
                             y: .shadowYOffset
                         )
                 }
-                .sheet(isPresented: $presentingModal) {
+                .sheet(isPresented: $navigation.addCoinSheet.isPresented) {
                     AddCoinBuilder.coinListView()
                 }
             }
