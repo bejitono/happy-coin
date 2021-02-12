@@ -10,13 +10,19 @@ import SwiftUI
 struct AmountView: View {
     
     let amount: String
+    let titleFontSize: CGFloat
+    
+    init(amount: String, titleFontSize: CGFloat = 100) {
+        self.amount = amount
+        self.titleFontSize = titleFontSize
+    }
     
     var body: some View {
         VStack {
             Text(amount)
                 .font(
                     .system(
-                        size: .titleFontSize,
+                        size: titleFontSize,
                         weight: .bold,
                         design: .default
                     )
@@ -32,7 +38,6 @@ struct AmountView: View {
 // MARK: - Constants
 
 private extension CGFloat {
-    static let titleFontSize: CGFloat = 100
     static let minTextScaleFactor: CGFloat = 0.3
 }
 

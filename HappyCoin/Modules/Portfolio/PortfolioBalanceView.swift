@@ -18,7 +18,7 @@ struct PortfolioBalanceView: View {
     var body: some View {
         VStack(alignment: .center, spacing: .spacing) {
             AmountTitleView(title: "Total")
-            AmountView(amount: viewModel.balance)
+            AmountView(amount: viewModel.balance, titleFontSize: .titleFontSize)
             Text(viewModel.valueIncrease)
                 .font(.subheadline)
                 .foregroundColor(.green)
@@ -50,7 +50,7 @@ private extension CGFloat {
     static let height: CGFloat = 250
     static let spacing: CGFloat = 10
     static let padding: CGFloat = 15
-    static let titleFontSize: CGFloat = 50
+    static let titleFontSize: CGFloat = 75
 }
 
 private extension Int {

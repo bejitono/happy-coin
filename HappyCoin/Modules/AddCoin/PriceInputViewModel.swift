@@ -10,10 +10,11 @@ import Combine
 final class PriceInputViewModel: ObservableObject {
     
     @Published var coinTitle: String = "Price per coin"
-    @Published var amount: String = "$0"
+    @Published var amount: String = ""
     let inputPriceTitle: String = "Save"
     let setCurrentPriceTitle: String = "Set current price"
         
+    private let currencySymbol = "$"
     private var digits: [String] = []
     private let decimal = "."
     private let symbol: String
@@ -24,6 +25,7 @@ final class PriceInputViewModel: ObservableObject {
          service: CoinService) {
         self.symbol = symbol
         self.service = service
+        update()
     }
     
     func update(digit: Int) {
@@ -55,7 +57,7 @@ final class PriceInputViewModel: ObservableObject {
 private extension PriceInputViewModel {
     
     func update() {
-        if digits.isEmpty { return amount = "0" }
-        amount = digits.joined()
+        if digits.isEmpty { return amount = currencySymbol + "0" }
+        amount = currencySymbol + digits.joined()
     }
 }

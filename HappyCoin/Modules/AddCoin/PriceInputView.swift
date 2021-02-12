@@ -19,7 +19,9 @@ struct PriceInputView: View {
     var body: some View {
         VStack(spacing: .spacing) {
             AmountTitleView(title: viewModel.coinTitle)
-            AmountView(amount: viewModel.amount)
+            AmountView(
+                amount: viewModel.amount
+            )
                 .frame(
                     height: .amountViewHeight,
                     alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
