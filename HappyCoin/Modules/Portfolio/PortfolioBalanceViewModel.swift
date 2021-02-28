@@ -16,11 +16,6 @@ struct PortfolioBalanceViewModel {
 
 extension PortfolioBalanceViewModel {
     
-    init(response: PortfolioResponse) {
-        self.balance = response.balance
-        self.valueIncrease = response.valueIncrease
-    }
-    
     static var empty = PortfolioBalanceViewModel(
         balance: "-",
         valueIncrease: "-"

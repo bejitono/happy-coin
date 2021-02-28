@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CoinAmountInputView: View {
-        
+    
+    @EnvironmentObject private var navigation: AppNavigation
     @ObservedObject private var viewModel: CoinAmountInputViewModel
     
     init(viewModel: CoinAmountInputViewModel) {
@@ -30,17 +31,24 @@ struct CoinAmountInputView: View {
                 decimalHandler: viewModel.addDecimal,
                 deleteHandler: viewModel.deleteDigit
             )
-            NavigationLink(
-                destination: AddCoinBuilder.priceInputView(symbol: viewModel.symbol),
-                tag: NavigationState.navigate,
-                selection: $viewModel.navigationState,
-                label: {
-                    CoinButton(
-                        title: viewModel.inputPriceTitle,
-                        action: viewModel.inputPrice
-                    )
+            CoinButton(
+                title: viewModel.inputPriceTitle,
+                action: {
+                    viewModel.saveAmount()
+                    navigation.addCoinSheet.isPresented = false
                 }
             )
+//            NavigationLink(
+//                destination: AddCoinBuilder.priceInputView(symbol: viewModel.symbol),
+//                tag: NavigationState.navigate,
+//                selection: $viewModel.navigationState,
+//                label: {
+//                    CoinButton(
+//                        title: viewModel.inputPriceTitle,
+//                        action: viewModel.inputPrice
+//                    )
+//                }
+//            )
         }
         .padding(.padding)
     }
@@ -61,8 +69,8 @@ struct CoinAmountInputView_Previews: PreviewProvider {
     static var previews: some View {
         CoinAmountInputView(
             viewModel: CoinAmountInputViewModel(
-                symbol: "BTC",
-                service: CoinService()
+                coin: CoinResponse(id: "1", name: "bitcoin", symbol: "btc"),
+                service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
             )
         )
     }

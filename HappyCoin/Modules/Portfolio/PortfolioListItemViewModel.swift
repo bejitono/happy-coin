@@ -17,13 +17,13 @@ struct PortfolioListItemViewModel {
 
 extension PortfolioListItemViewModel {
     
-    init(response: PortfolioItemResponse) {
+    init(response: Coin) {
         self.id = response.id
-        self.image = response.image
+        self.image = response.image ?? ""
         self.name = response.name
-        self.currentPrice = response.currentPrice
-        self.numberOfUnits = response.numberOfUnits
-        self.totalValue = response.totalValue
-        self.valueIncrease = response.valueIncrease
+        self.currentPrice = (response.currentPrice ?? 0).toCurrencyString()
+        self.numberOfUnits = response.symbol.uppercased() + " " + String(response.numberOfUnits)
+        self.totalValue = response.totalValue.toCurrencyString()
+        self.valueIncrease = (response.valueIncrease ?? 0).toPercentageString()
     }
 }

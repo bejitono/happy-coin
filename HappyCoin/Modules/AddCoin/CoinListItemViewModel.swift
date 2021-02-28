@@ -6,7 +6,7 @@
 //
 
 struct CoinListItemViewModel {
-    let image: String
+    let id: String
     let name: String
     let symbol: String
 }
@@ -14,7 +14,7 @@ struct CoinListItemViewModel {
 extension CoinListItemViewModel {
     
     init(response: CoinResponse) {
-        self.image = response.image
+        self.id = response.id
         self.name = response.name
         self.symbol = response.symbol
     }

@@ -14,23 +14,23 @@ struct NavigationState {
 
 final class CoinAmountInputViewModel: ObservableObject {
     
-    @Published var coinTitle: String
     @Published var amount: String = "0"
     @Published var navigationState: Int? = NavigationState.viewing
-    @Published var symbol: String
-    let inputPriceTitle: String = "Next"
+    var coinTitle: String { coin.name }
+    var symbol: String { coin.symbol }
+    let inputPriceTitle: String = "Save"
         
     private var digits: [String] = []
     private let decimal = "."
+    
+    private var coin: CoinResponse
     private let service: CoinService
     private var disposables = Set<AnyCancellable>()
     
-    init(symbol: String,
+    init(coin: CoinResponse,
          service: CoinService) {
-        self.symbol = symbol
+        self.coin = coin
         self.service = service
-        
-        coinTitle = service.getCoinFor(symbol: symbol).name
     }
     
     func update(digit: Int) {
@@ -50,9 +50,15 @@ final class CoinAmountInputViewModel: ObservableObject {
         update()
     }
     
-    func inputPrice() {
-        navigationState = NavigationState.navigate
+    func saveAmount() {
+        guard let amount = Double(amount) else { return }
+        coin.numberOfUnits = amount
+        service.save(coin: coin)
     }
+    
+//    func inputPrice() {
+//        navigationState = NavigationState.navigate
+//    }
 }
 
 private extension CoinAmountInputViewModel {

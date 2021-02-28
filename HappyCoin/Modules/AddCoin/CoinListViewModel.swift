@@ -25,7 +25,7 @@ extension CoinListViewModel {
     func getCoins() {
         service.fetchCoins()
             .map { response in
-                response.coins.map(CoinListItemViewModel.init)
+                response.map(CoinListItemViewModel.init)
             }
             .sink { [weak self] completion in
                 switch completion {
