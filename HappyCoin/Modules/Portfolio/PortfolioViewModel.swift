@@ -21,15 +21,20 @@ final class PortfolioViewModel: ObservableObject {
         self.balanceViewModel = balanceViewModel
         self.listViewModel = listViewModel
         self.portfolioService = portfolioService
-        getPortfolio(forUserId: "1")
     }
     
-    func getPortfolio(forUserId userId: String) {
-        portfolioService.portfolio(forUserId: userId)
+    func getPortfolio() {
+        portfolioService.portfolio()
             .map { response in
                 (
-                    items: response.items.map(PortfolioListItemViewModel.init),
-                    balance: PortfolioBalanceViewModel(response: response)
+                    items: response.map(PortfolioListItemViewModel.init),
+                    balance: PortfolioBalanceViewModel(
+                        balance: response
+                            .map { ($0.currentPrice ?? 0) * $0.numberOfUnits }
+                            .reduce(0, +)
+                            .toCurrencyString(),
+                        valueIncrease: ""
+                    )
                 )
             }
             .sink { [weak self] completion in
