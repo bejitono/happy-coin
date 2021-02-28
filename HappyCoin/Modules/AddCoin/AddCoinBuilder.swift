@@ -10,14 +10,14 @@ import SwiftUI
 struct AddCoinBuilder {
     
     static func coinListView() -> some View {
-        let viewModel = CoinListViewModel(service: CoinService())
+        let viewModel = CoinListViewModel(service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl()))
         return CoinListView(viewModel: viewModel)
     }
     
-    static func coinAmountInputView(symbol: String) -> some View {
+    static func coinAmountInputView(id: String, name: String, symbol: String) -> some View {
         let viewModel = CoinAmountInputViewModel(
-            symbol: symbol,
-            service: CoinService()
+            coin: CoinResponse(id: id, name: name, symbol: symbol),
+            service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
         )
         return CoinAmountInputView(viewModel: viewModel)
     }
@@ -25,7 +25,7 @@ struct AddCoinBuilder {
     static func priceInputView(symbol: String) -> some View {
         let viewModel = PriceInputViewModel(
             symbol: symbol,
-            service: CoinService()
+            service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
         )
         return PriceInputView(viewModel: viewModel)
     }

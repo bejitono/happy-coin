@@ -1,16 +1,17 @@
 //
-//  CoinResponse.swift
+//  Coin.swift
 //  HappyCoin
 //
-//  Created by Stefano on 06.02.21.
+//  Created by Stefano on 07.02.21.
 //
 
-struct CoinListResponse {
-    let coins: [CoinResponse]
-}
-
-struct CoinResponse {
-    let image: String
+struct CoinResponse: Codable {
+    let id: String
     let name: String
     let symbol: String
+    var numberOfUnits: Double? = nil
+}
+
+extension CoinResponse: UserCacheStringConvertible {
+    static var key: String = "HappyCoin.Coin"
 }
