@@ -50,6 +50,9 @@ struct PortfolioView: View {
                 }
             }
         }
+        .onReceive(navigation.$addCoinSheet) { _ in
+            viewModel.getPortfolio()
+        }
     }
 }
 
@@ -70,7 +73,7 @@ private extension CGFloat {
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
         let listViewModel = PortfolioListViewModel()
-        let service = PortfolioService()
+        let service = PortfolioService(cache: UserCache(), networkClient: NetworkClientImpl())
         PortfolioView(
             viewModel: PortfolioViewModel(
                 balanceViewModel: .empty,

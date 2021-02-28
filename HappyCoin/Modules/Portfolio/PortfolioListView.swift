@@ -5,6 +5,7 @@
 //  Created by De MicheliStefano on 24.10.20.
 //
 
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct PortfolioListView: View {
@@ -18,7 +19,7 @@ struct PortfolioListView: View {
     var body: some View {
         List(viewModel.items, id: \.id) { item in
             HStack {
-                Image(systemName: item.image)
+                WebImage(url: URL(string: item.image))
                     .resizable()
                     .frame(width: .imageSize, height: .imageSize)
                     .foregroundColor(.orange)
@@ -60,7 +61,10 @@ struct PortfolioListView: View {
                                     design: .default
                                 )
                             )
-                            .foregroundColor(.green)
+                            .foregroundColor((Double(item.valueIncrease) ?? 0).sign == .minus
+                                                ? .green
+                                                : .red
+                            )
                     }
                 }
             }

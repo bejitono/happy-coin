@@ -18,8 +18,14 @@ struct CoinListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.items, id: \.symbol) { coin in
-                NavigationLink(destination: AddCoinBuilder.coinAmountInputView(symbol: coin.symbol)) {
-                    CoinRowView(image: coin.image, name: coin.name)
+                NavigationLink(
+                    destination: AddCoinBuilder.coinAmountInputView(
+                        id: coin.id,
+                        name: coin.name,
+                        symbol: coin.symbol
+                    )
+                ) {
+                    CoinRowView(name: coin.name)
                 }
             }
             .padding(.horizontal, .padding)
@@ -30,15 +36,10 @@ struct CoinListView: View {
 
 struct CoinRowView: View {
     
-    let image: String
     let name: String
     
     var body: some View {
         HStack(spacing: .spacing) {
-            Image(systemName: image)
-                .resizable()
-                .frame(width: .imageSize, height: .imageSize)
-                .foregroundColor(.orange)
             Text(name)
                 .font(
                     .system(
@@ -67,7 +68,7 @@ private extension CGFloat {
 #if DEBUG
 struct CoinListView_Previews: PreviewProvider {
     static var previews: some View {
-        let service = CoinService()
+        let service = CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
         let listViewModel = CoinListViewModel(service: service)
         CoinListView(viewModel: listViewModel)
     }

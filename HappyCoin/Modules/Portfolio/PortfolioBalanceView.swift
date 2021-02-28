@@ -49,7 +49,7 @@ private extension CGFloat {
     static let width: CGFloat = 320
     static let height: CGFloat = 250
     static let spacing: CGFloat = 10
-    static let padding: CGFloat = 15
+    static let padding: CGFloat = 30
     static let titleFontSize: CGFloat = 75
 }
 

@@ -66,7 +66,7 @@ struct PriceInputView_Previews: PreviewProvider {
         PriceInputView(
             viewModel: PriceInputViewModel(
                 symbol: "BTC",
-                service: CoinService()
+                service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
             )
         )
     }
