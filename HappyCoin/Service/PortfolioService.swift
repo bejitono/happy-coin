@@ -9,101 +9,45 @@ import Combine
 import Foundation
 
 protocol PortfolioFetchable {
-    func portfolio(forUserId userId: String) -> AnyPublisher<PortfolioResponse, BlazeError>
+    func portfolio() -> AnyPublisher<[Coin], CoinError>
 }
 
 final class PortfolioService {
     
-    init() { }
+    private let cache: UserCache
+    private let networkClient: NetworkClient
+    private var disposables = Set<AnyCancellable>()
+    
+    init(cache: UserCache,
+         networkClient: NetworkClient) {
+        self.cache = cache
+        self.networkClient = networkClient
+    }
 }
 
 extension PortfolioService: PortfolioFetchable {
     
-    func portfolio(forUserId userId: String) -> AnyPublisher<PortfolioResponse, BlazeError> {
-        return Just(data)
-            .receive(on: DispatchQueue.main)
-            .setFailureType(to: BlazeError.self)
+    func portfolio() -> AnyPublisher<[Coin], CoinError> {
+        guard let user: User = cache.get() else { return Just([]).setFailureType(to: CoinError.self).eraseToAnyPublisher() }
+        
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.coingecko.com"
+        components.path = "/api/v3/coins/markets"
+        components.queryItems = [
+            URLQueryItem(name: "vs_currency", value: "usd"),
+            URLQueryItem(name: "ids", value: user.coins.compactMap { $0.id }.joined(separator: ",")),
+            URLQueryItem(name: "order", value: "market_cap_desc")
+        ]
+        let publisher: AnyPublisher<[CoinMarketResponse], CoinError> = networkClient.request(with: components)
+        return publisher
+            .map( { [weak self] response -> [Coin] in
+                let user: User? = self?.cache.get()
+                return response.map { coin in
+                    let savedCoin = user?.coins.first(where: { $0.id == coin.id })
+                    return Coin.init(response: coin, units: savedCoin?.numberOfUnits ?? 0.0)
+                }
+            })
             .eraseToAnyPublisher()
     }
 }
-
-private let data = PortfolioResponse(
-    balance: "$1423",
-    valueIncrease: "+$1000000 (+3000%)",
-    items: items
-)
-
-private let items = [
-    PortfolioItemResponse(
-        id: "1",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "2",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "3",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "4",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "5",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "6",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "7",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    ),
-    PortfolioItemResponse(
-        id: "8",
-        image: "bitcoinsign.circle.fill",
-        name: "Bitcoin BTC",
-        currentPrice: "$130000",
-        numberOfUnits: "100",
-        totalValue: "$13000000",
-        valueIncrease: "+$1000000 (+3000%)"
-    )
-]
