@@ -17,69 +17,15 @@ struct PortfolioListView: View {
     }
     
     var body: some View {
-        List(viewModel.items, id: \.id) { item in
-            HStack {
-                WebImage(url: URL(string: item.image))
-                    .resizable()
-                    .frame(width: .imageSize, height: .imageSize)
-                    .foregroundColor(.orange)
-                VStack(alignment: .leading, spacing: .labelSpacing) {
-                    Text(item.name)
-                        .font(
-                            .system(
-                                size: .titleFontSize,
-                                weight: .bold,
-                                design: .default
-                            )
-                        )
-                    Text("\(item.numberOfUnits) | \(item.currentPrice)")
-                        .font(
-                            .system(
-                                size: .subtitleFontSize,
-                                weight: .light,
-                                design: .default
-                            )
-                        )
-                }
-                .padding()
-                Spacer()
-                VStack(alignment: .trailing, spacing: .labelSpacing) {
-                    Text(item.totalValue)
-                        .font(
-                            .system(
-                                size: .titleFontSize,
-                                weight: .bold,
-                                design: .default
-                            )
-                        )
-                    HStack(spacing: .subtitleSpacing) {
-                        Text(item.valueIncrease)
-                            .font(
-                                .system(
-                                    size: .subtitleFontSize,
-                                    weight: .light,
-                                    design: .default
-                                )
-                            )
-                            .foregroundColor((Double(item.valueIncrease) ?? 0).sign == .minus
-                                                ? .green
-                                                : .red
-                            )
-                    }
-                }
+        List {
+            ForEach(viewModel.items, id: \.id) { item in
+                PortfolioListItemView(viewModel: item)
             }
-            .padding(.vertical, .verticalPadding)
+            .onDelete(perform: viewModel.delete)
         }
     }
 }
 
 // MARK: - Constants
 
-private extension CGFloat {
-    static let titleFontSize: CGFloat = 18
-    static let subtitleFontSize: CGFloat = 13
-    static let imageSize: CGFloat = 38
-    static let subtitleSpacing: CGFloat = 8
-    static let labelSpacing: CGFloat = 6
-    static let verticalPadding: CGFloat = 7
-}
+private extension CGFloat { }
