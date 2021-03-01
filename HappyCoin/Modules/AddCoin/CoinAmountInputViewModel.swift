@@ -31,6 +31,11 @@ final class CoinAmountInputViewModel: ObservableObject {
          service: CoinService) {
         self.coin = coin
         self.service = service
+        
+        if let amount = coin.numberOfUnits {
+            digits = String(amount).compactMap { String($0)  }
+            update()
+        }
     }
     
     func update(digit: Int) {

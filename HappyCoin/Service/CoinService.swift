@@ -29,11 +29,17 @@ final class CoinService {
 extension CoinService: CoinServiceable {
     
     func save(coin: CoinResponse) {
+        let coin = Coin(response: coin)
         guard var user: User = cache.get() else {
-            cache.set(User(coins: [Coin(response: coin)]))
+            cache.set(User(coins: [coin]))
             return
         }
-        user.coins.append(Coin(response: coin))
+        if let index = user.coins.firstIndex(where: { $0.id == coin.id }) {
+            user.coins[index] = coin
+            cache.set(user)
+            return
+        }
+        user.coins.append(coin)
         cache.set(user)
     }
     

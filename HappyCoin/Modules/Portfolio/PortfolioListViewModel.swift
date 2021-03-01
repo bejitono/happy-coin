@@ -9,6 +9,7 @@ import Foundation
 
 protocol PortfolioListViewModelOutput: AnyObject {
     func didDelete(at offsets: IndexSet)
+    func didUpdate()
 }
 
 struct PortfolioListViewModel {
@@ -19,6 +20,10 @@ struct PortfolioListViewModel {
     
     func delete(at offsets: IndexSet) {
         output?.didDelete(at: offsets)
+    }
+    
+    func update() {
+        output?.didUpdate()
     }
 }
 

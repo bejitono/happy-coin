@@ -31,6 +31,7 @@
 		3D712A1525D03BE900D2B9D7 /* PriceInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D712A1425D03BE900D2B9D7 /* PriceInputView.swift */; };
 		3D712A1A25D03BF100D2B9D7 /* PriceInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D712A1925D03BF100D2B9D7 /* PriceInputViewModel.swift */; };
 		3D7340EE25E72AF800D34DEB /* CoinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D7340EC25E72AF800D34DEB /* CoinModel.xcdatamodeld */; };
+		3D77284A25ECEB2200E51628 /* CoinUpdateAmountInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D77284925ECEB2200E51628 /* CoinUpdateAmountInputView.swift */; };
 		3D7BA85C25CE23FC0087D9BB /* HappyCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA85B25CE23FC0087D9BB /* HappyCoinApp.swift */; };
 		3D7BA86025CE23FE0087D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA85F25CE23FE0087D9BB /* Assets.xcassets */; };
 		3D7BA86325CE23FE0087D9BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7BA86225CE23FE0087D9BB /* Preview Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		3D712A1425D03BE900D2B9D7 /* PriceInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInputView.swift; sourceTree = "<group>"; };
 		3D712A1925D03BF100D2B9D7 /* PriceInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInputViewModel.swift; sourceTree = "<group>"; };
 		3D7340ED25E72AF800D34DEB /* CoinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoinModel.xcdatamodel; sourceTree = "<group>"; };
+		3D77284925ECEB2200E51628 /* CoinUpdateAmountInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinUpdateAmountInputView.swift; sourceTree = "<group>"; };
 		3D7BA85825CE23FC0087D9BB /* HappyCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7BA85B25CE23FC0087D9BB /* HappyCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyCoinApp.swift; sourceTree = "<group>"; };
 		3D7BA85F25CE23FE0087D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				3D3A967125CE409500BD0642 /* CoinListViewModel.swift */,
 				3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */,
 				3DFA7C9925CFAF25003D76CF /* CoinAmountInputView.swift */,
+				3D77284925ECEB2200E51628 /* CoinUpdateAmountInputView.swift */,
 				3DFA7CA825D01C57003D76CF /* CoinAmountInputViewModel.swift */,
 				3D712A1425D03BE900D2B9D7 /* PriceInputView.swift */,
 				3D712A1925D03BF100D2B9D7 /* PriceInputViewModel.swift */,
@@ -519,6 +522,7 @@
 				3D3A964625CE293C00BD0642 /* BlazeError.swift in Sources */,
 				3D3A966D25CE408F00BD0642 /* CoinListView.swift in Sources */,
 				3D3A967C25CE42FF00BD0642 /* CoinService.swift in Sources */,
+				3D77284A25ECEB2200E51628 /* CoinUpdateAmountInputView.swift in Sources */,
 				3D9C6AD025CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift in Sources */,
 				3D7CCFDA25D63AF200E832D6 /* PersistentStorage.swift in Sources */,
 				3D3A964225CE293C00BD0642 /* PortfolioResponse.swift in Sources */,

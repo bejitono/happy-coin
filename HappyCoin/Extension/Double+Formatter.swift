@@ -13,6 +13,7 @@ extension Double {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US") //.current
         formatter.numberStyle = .currency
+        formatter.minimumFractionDigits = isWholeNumber ? 0 : 2
         return formatter.string(from: self as NSNumber) ?? ""
     }
     
@@ -24,4 +25,6 @@ extension Double {
         formatter.maximumFractionDigits = 3
         return formatter.string(from: self as NSNumber) ?? ""
     }
+    
+    private var isWholeNumber: Bool { isZero ? true : !isNormal ? false : self == rounded() }
 }

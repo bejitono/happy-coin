@@ -22,8 +22,8 @@ final class PortfolioViewModel: ObservableObject {
         self.balanceViewModel = balanceViewModel
         self.listViewModel = listViewModel
         self.portfolioService = portfolioService
-        
         self.listViewModel.output = self
+        getPortfolio()
     }
     
     func getPortfolio() {
@@ -92,5 +92,9 @@ extension PortfolioViewModel: PortfolioListViewModelOutput {
                 self?.balanceViewModel.valueIncrease = value.balance.valueIncrease
             }
             .store(in: &disposables)
+    }
+    
+    func didUpdate() {
+        getPortfolio()
     }
 }
