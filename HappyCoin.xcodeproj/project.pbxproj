@@ -26,6 +26,10 @@
 		3D5FBC2C25E681A500C06B11 /* Combine+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FBC2B25E681A500C06B11 /* Combine+Decode.swift */; };
 		3D5FBC3425E6822800C06B11 /* CoinError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FBC3325E6822800C06B11 /* CoinError.swift */; };
 		3D5FBC4125E682B700C06B11 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FBC4025E682B700C06B11 /* NetworkClient.swift */; };
+		3D62704125ED2FF2005FF88B /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62704025ED2FF2005FF88B /* SettingsListView.swift */; };
+		3D62704925ED3016005FF88B /* SettingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62704825ED3016005FF88B /* SettingsListViewModel.swift */; };
+		3D62704E25ED3058005FF88B /* SettingsListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62704D25ED3058005FF88B /* SettingsListItemViewModel.swift */; };
+		3D62705625ED30C6005FF88B /* SettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62705525ED30C6005FF88B /* SettingsBuilder.swift */; };
 		3D683EE725E7DA4C005ACE43 /* UserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D683EE625E7DA4C005ACE43 /* UserCache.swift */; };
 		3D683EEF25E7E3EB005ACE43 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D683EEE25E7E3EB005ACE43 /* User.swift */; };
 		3D712A1525D03BE900D2B9D7 /* PriceInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D712A1425D03BE900D2B9D7 /* PriceInputView.swift */; };
@@ -95,6 +99,10 @@
 		3D5FBC2B25E681A500C06B11 /* Combine+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Decode.swift"; sourceTree = "<group>"; };
 		3D5FBC3325E6822800C06B11 /* CoinError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinError.swift; sourceTree = "<group>"; };
 		3D5FBC4025E682B700C06B11 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		3D62704025ED2FF2005FF88B /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
+		3D62704825ED3016005FF88B /* SettingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewModel.swift; sourceTree = "<group>"; };
+		3D62704D25ED3058005FF88B /* SettingsListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListItemViewModel.swift; sourceTree = "<group>"; };
+		3D62705525ED30C6005FF88B /* SettingsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilder.swift; sourceTree = "<group>"; };
 		3D683EE625E7DA4C005ACE43 /* UserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCache.swift; sourceTree = "<group>"; };
 		3D683EEE25E7E3EB005ACE43 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3D712A1425D03BE900D2B9D7 /* PriceInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInputView.swift; sourceTree = "<group>"; };
@@ -214,6 +222,7 @@
 		3D3A966725CE3E0200BD0642 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3D62703F25ED2FCF005FF88B /* Settings */,
 				3D3A966825CE3E1100BD0642 /* AddCoin */,
 				3D3A962425CE292200BD0642 /* Portfolio */,
 			);
@@ -244,6 +253,17 @@
 				3D5FBC3325E6822800C06B11 /* CoinError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		3D62703F25ED2FCF005FF88B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3D62704D25ED3058005FF88B /* SettingsListItemViewModel.swift */,
+				3D62704825ED3016005FF88B /* SettingsListViewModel.swift */,
+				3D62704025ED2FF2005FF88B /* SettingsListView.swift */,
+				3D62705525ED30C6005FF88B /* SettingsBuilder.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		3D7340EB25E72AC800D34DEB /* Persistence */ = {
@@ -513,6 +533,7 @@
 				3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */,
 				3D9C6AC825CE546200D45BDC /* AddCoinBuilder.swift in Sources */,
 				3D9C6AC225CE50E000D45BDC /* KeyboardViewController.swift in Sources */,
+				3D62705625ED30C6005FF88B /* SettingsBuilder.swift in Sources */,
 				3DFA7CB725D02C68003D76CF /* CoinButton.swift in Sources */,
 				3D712A1A25D03BF100D2B9D7 /* PriceInputViewModel.swift in Sources */,
 				3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */,
@@ -521,6 +542,7 @@
 				3D95F19A25EB8E2B00785697 /* Coin.swift in Sources */,
 				3D3A964625CE293C00BD0642 /* BlazeError.swift in Sources */,
 				3D3A966D25CE408F00BD0642 /* CoinListView.swift in Sources */,
+				3D62704E25ED3058005FF88B /* SettingsListItemViewModel.swift in Sources */,
 				3D3A967C25CE42FF00BD0642 /* CoinService.swift in Sources */,
 				3D77284A25ECEB2200E51628 /* CoinUpdateAmountInputView.swift in Sources */,
 				3D9C6AD025CE57CA00D45BDC /* KeyboardView+UIViewControllerRepresentable.swift in Sources */,
@@ -536,7 +558,9 @@
 				3DFA7C9F25CFEAC5003D76CF /* AmountView.swift in Sources */,
 				3D9C6AC325CE50E000D45BDC /* KeypadImageView.swift in Sources */,
 				3D683EEF25E7E3EB005ACE43 /* User.swift in Sources */,
+				3D62704125ED2FF2005FF88B /* SettingsListView.swift in Sources */,
 				3D3A963225CE292200BD0642 /* PortfolioBuilder.swift in Sources */,
+				3D62704925ED3016005FF88B /* SettingsListViewModel.swift in Sources */,
 				3D3A963325CE292200BD0642 /* PortfolioListViewModel.swift in Sources */,
 				3D3A963025CE292200BD0642 /* PortfolioViewModel.swift in Sources */,
 				3DFA7C9A25CFAF25003D76CF /* CoinAmountInputView.swift in Sources */,

@@ -10,6 +10,7 @@ import SwiftUI
 struct PortfolioView: View {
     
     @EnvironmentObject private var addCoinFlow: AddCoinFlow
+    @EnvironmentObject private var settingsFlow: SettingsFlow
     @ObservedObject private var viewModel: PortfolioViewModel
     
     init(viewModel: PortfolioViewModel) {
@@ -18,9 +19,26 @@ struct PortfolioView: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .center, spacing: .spacing) {
-                PortfolioBalanceView(viewModel: viewModel.balanceViewModel)
-                PortfolioListView(viewModel: viewModel.listViewModel).environmentObject(UpdateCoinFlow())
+            VStack(alignment: .center, spacing: .topSpacing) {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.settingsFlow.settingsSheet.isPresented = true
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                            .resizable()
+                            .frame(width: .settingsButtonSize, height: .settingsButtonSize)
+                            .foregroundColor(.gray)
+                    }
+                    .sheet(isPresented: $settingsFlow.settingsSheet.isPresented,
+                           onDismiss: viewModel.getPortfolio) {
+                        SettingsBuilder.currencySettingsView()
+                    }
+                }
+                VStack(alignment: .center, spacing: .spacing) {
+                    PortfolioBalanceView(viewModel: viewModel.balanceViewModel)
+                    PortfolioListView(viewModel: viewModel.listViewModel).environmentObject(UpdateCoinFlow())
+                }
             }
             .padding(.horizontal)
             .padding(.top, .topPadding)
@@ -63,8 +81,10 @@ private extension CGFloat {
     static let shadowXOffset: CGFloat = 0
     static let spacing: CGFloat = 55
     static let addButtonSize: CGFloat = 60
+    static let settingsButtonSize: CGFloat = 25
     static let buttonLine: CGFloat = 4
     static let topPadding: CGFloat = 20
+    static let topSpacing: CGFloat = 15
 }
 
 // MARK: - Previews

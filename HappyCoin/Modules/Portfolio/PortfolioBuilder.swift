@@ -11,7 +11,9 @@ struct PortfolioBuilder {
     
     static func makeMainView() -> some View {
         let viewModel = PortfolioViewModel(portfolioService: PortfolioService(cache: UserCache(), networkClient: NetworkClientImpl()))
-        return PortfolioView(viewModel: viewModel).environmentObject(AddCoinFlow())
+        return PortfolioView(viewModel: viewModel)
+            .environmentObject(AddCoinFlow())
+            .environmentObject(SettingsFlow())
     }
     
     static func makeBalanceView(

@@ -31,6 +31,19 @@ final class UpdateCoinFlow: ObservableObject {
     }
 }
 
+final class SettingsFlow: ObservableObject {
+    @Published var settingsSheet: Sheet = Sheet()
+    
+    private var disposable: AnyCancellable? = nil
+    
+    init() {
+        disposable = settingsSheet.objectWillChange.sink { [weak self] _ in
+            self?.objectWillChange.send()
+        }
+    }
+}
+
+
 final class Sheet: ObservableObject {
     @Published var isPresented: Bool = false
 }
