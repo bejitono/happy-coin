@@ -60,9 +60,9 @@ struct PortfolioListItemView: View {
                                 design: .default
                             )
                         )
-                        .foregroundColor((Double(viewModel.valueIncrease) ?? 0).sign == .minus
-                                            ? .green
-                                            : .red
+                        .foregroundColor((Double(viewModel.valueIncrease.dropLast()) ?? 0).sign == .minus
+                                            ? .red
+                                            : .green
                         )
                 }
             }
