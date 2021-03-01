@@ -38,6 +38,7 @@
 		3D7BA87925CE23FF0087D9BB /* HappyCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BA87825CE23FF0087D9BB /* HappyCoinUITests.swift */; };
 		3D7CCFD525D537A100E832D6 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CCFD425D537A100E832D6 /* Navigation.swift */; };
 		3D7CCFDA25D63AF200E832D6 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CCFD925D63AF200E832D6 /* PersistentStorage.swift */; };
+		3D8B871925EC78DB0006E7FA /* PortfolioListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B871825EC78DB0006E7FA /* PortfolioListItemView.swift */; };
 		3D95F19A25EB8E2B00785697 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F19925EB8E2B00785697 /* Coin.swift */; };
 		3D95F1A025EBD8ED00785697 /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F19F25EBD8ED00785697 /* Double+Formatter.swift */; };
 		3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */; };
@@ -111,6 +112,7 @@
 		3D7BA87A25CE23FF0087D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7CCFD425D537A100E832D6 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		3D7CCFD925D63AF200E832D6 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		3D8B871825EC78DB0006E7FA /* PortfolioListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioListItemView.swift; sourceTree = "<group>"; };
 		3D95F19925EB8E2B00785697 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		3D95F19F25EBD8ED00785697 /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
 		3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadStringView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				3D3A962A25CE292200BD0642 /* PortfolioBuilder.swift */,
 				3D3A962525CE292200BD0642 /* PortfolioListItemViewModel.swift */,
+				3D8B871825EC78DB0006E7FA /* PortfolioListItemView.swift */,
 				3D3A962625CE292200BD0642 /* PortfolioBalanceViewModel.swift */,
 				3D3A962725CE292200BD0642 /* PortfolioBalanceView.swift */,
 				3D3A962B25CE292200BD0642 /* PortfolioListViewModel.swift */,
@@ -534,6 +537,7 @@
 				3D3A963025CE292200BD0642 /* PortfolioViewModel.swift in Sources */,
 				3DFA7C9A25CFAF25003D76CF /* CoinAmountInputView.swift in Sources */,
 				3D3A968425CE459800BD0642 /* CoinMarketResponse.swift in Sources */,
+				3D8B871925EC78DB0006E7FA /* PortfolioListItemView.swift in Sources */,
 				3DFA7CA425CFEEC2003D76CF /* AmountTitleView.swift in Sources */,
 				3D5FBC3425E6822800C06B11 /* CoinError.swift in Sources */,
 				3DFA7CA925D01C57003D76CF /* CoinAmountInputViewModel.swift in Sources */,

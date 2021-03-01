@@ -10,10 +10,12 @@ import Foundation
 
 protocol PortfolioFetchable {
     func portfolio() -> AnyPublisher<[Coin], CoinError>
+    func remove(coinId: String) -> AnyPublisher<[Coin], CoinError>
 }
 
 final class PortfolioService {
     
+    private var coins: [Coin] = []
     private let cache: UserCache
     private let networkClient: NetworkClient
     private var disposables = Set<AnyCancellable>()
@@ -28,7 +30,9 @@ final class PortfolioService {
 extension PortfolioService: PortfolioFetchable {
     
     func portfolio() -> AnyPublisher<[Coin], CoinError> {
-        guard let user: User = cache.get() else { return Just([]).setFailureType(to: CoinError.self).eraseToAnyPublisher() }
+        guard let user: User = cache.get(), !user.coins.isEmpty else {
+            return Just([]).setFailureType(to: CoinError.self).eraseToAnyPublisher()
+        }
         
         var components = URLComponents()
         components.scheme = "https"
@@ -42,12 +46,27 @@ extension PortfolioService: PortfolioFetchable {
         let publisher: AnyPublisher<[CoinMarketResponse], CoinError> = networkClient.request(with: components)
         return publisher
             .map( { [weak self] response -> [Coin] in
-                let user: User? = self?.cache.get()
-                return response.map { coin in
+                guard let self = self else { return [] }
+                let user: User? = self.cache.get()
+                self.coins = response.map { coin in
                     let savedCoin = user?.coins.first(where: { $0.id == coin.id })
                     return Coin.init(response: coin, units: savedCoin?.numberOfUnits ?? 0.0)
                 }
+                return self.coins
             })
             .eraseToAnyPublisher()
+    }
+    
+    func remove(coinId: String) -> AnyPublisher<[Coin], CoinError> {
+        guard var user: User = cache.get(),
+              let userCoinIndex = user.coins.firstIndex(where: { $0.id == coinId }),
+              let coinIndex = coins.firstIndex(where: { $0.id == coinId })
+        else {
+            return Just([]).setFailureType(to: CoinError.self).eraseToAnyPublisher()
+        }
+        user.coins.remove(at: userCoinIndex)
+        coins.remove(at: coinIndex)
+        cache.set(user)
+        return Just(coins).setFailureType(to: CoinError.self).eraseToAnyPublisher()
     }
 }

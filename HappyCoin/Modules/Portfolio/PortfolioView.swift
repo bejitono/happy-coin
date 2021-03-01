@@ -23,6 +23,7 @@ struct PortfolioView: View {
                 PortfolioListView(viewModel: viewModel.listViewModel)
             }
             .padding(.horizontal)
+            .padding(.top, .topPadding)
             VStack {
                 Spacer()
                 Button(action: {
@@ -65,6 +66,7 @@ private extension CGFloat {
     static let spacing: CGFloat = 55
     static let addButtonSize: CGFloat = 60
     static let buttonLine: CGFloat = 4
+    static let topPadding: CGFloat = 20
 }
 
 // MARK: - Previews
