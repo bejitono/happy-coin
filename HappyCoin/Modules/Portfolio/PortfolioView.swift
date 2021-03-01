@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PortfolioView: View {
     
-    @EnvironmentObject private var navigation: AppNavigation
+    @EnvironmentObject private var addCoinFlow: AddCoinFlow
     @ObservedObject private var viewModel: PortfolioViewModel
     
     init(viewModel: PortfolioViewModel) {
@@ -20,14 +20,14 @@ struct PortfolioView: View {
         ZStack {
             VStack(alignment: .center, spacing: .spacing) {
                 PortfolioBalanceView(viewModel: viewModel.balanceViewModel)
-                PortfolioListView(viewModel: viewModel.listViewModel)
+                PortfolioListView(viewModel: viewModel.listViewModel).environmentObject(UpdateCoinFlow())
             }
             .padding(.horizontal)
             .padding(.top, .topPadding)
             VStack {
                 Spacer()
                 Button(action: {
-                    self.navigation.addCoinSheet.isPresented = true
+                    self.addCoinFlow.addCoinSheet.isPresented = true
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
@@ -46,13 +46,11 @@ struct PortfolioView: View {
                             y: .shadowYOffset
                         )
                 }
-                .sheet(isPresented: $navigation.addCoinSheet.isPresented) {
+                .sheet(isPresented: $addCoinFlow.addCoinSheet.isPresented,
+                       onDismiss: viewModel.getPortfolio) {
                     AddCoinBuilder.coinListView()
                 }
             }
-        }
-        .onReceive(navigation.$addCoinSheet) { _ in
-            viewModel.getPortfolio()
         }
     }
 }

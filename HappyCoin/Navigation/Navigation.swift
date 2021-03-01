@@ -7,13 +7,25 @@
 
 import Combine
 
-final class AppNavigation: ObservableObject {
+final class AddCoinFlow: ObservableObject {
     @Published var addCoinSheet: Sheet = Sheet()
     
     private var disposable: AnyCancellable? = nil
     
     init() {
         disposable = addCoinSheet.objectWillChange.sink { [weak self] _ in
+            self?.objectWillChange.send()
+        }
+    }
+}
+
+final class UpdateCoinFlow: ObservableObject {
+    @Published var updateCoinSheet: Sheet = Sheet()
+    
+    private var disposable: AnyCancellable? = nil
+    
+    init() {
+        disposable = updateCoinSheet.objectWillChange.sink { [weak self] _ in
             self?.objectWillChange.send()
         }
     }

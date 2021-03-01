@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoinAmountInputView: View {
     
-    @EnvironmentObject private var navigation: AppNavigation
+    @EnvironmentObject private var navigation: AddCoinFlow
     @ObservedObject private var viewModel: CoinAmountInputViewModel
     
     init(viewModel: CoinAmountInputViewModel) {

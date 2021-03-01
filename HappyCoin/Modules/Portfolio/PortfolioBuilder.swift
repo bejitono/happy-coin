@@ -11,7 +11,7 @@ struct PortfolioBuilder {
     
     static func makeMainView() -> some View {
         let viewModel = PortfolioViewModel(portfolioService: PortfolioService(cache: UserCache(), networkClient: NetworkClientImpl()))
-        return PortfolioView(viewModel: viewModel).environmentObject(AppNavigation())
+        return PortfolioView(viewModel: viewModel).environmentObject(AddCoinFlow())
     }
     
     static func makeBalanceView(
@@ -24,6 +24,6 @@ struct PortfolioBuilder {
     
     static func makeListView() -> some View {
         let viewModel = PortfolioListViewModel()
-        return PortfolioListView(viewModel: viewModel)
+        return PortfolioListView(viewModel: viewModel).environmentObject(UpdateCoinFlow())
     }
 }

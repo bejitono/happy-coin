@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PriceInputView: View {
     
-    @EnvironmentObject private var navigation: AppNavigation
+    @EnvironmentObject private var navigation: AddCoinFlow
     @ObservedObject private var viewModel: PriceInputViewModel
     
     init(viewModel: PriceInputViewModel) {
