@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol UserCachable {
+protocol UserCacheable {
     
     func set<Data>(_ data: Data) where Data: UserCacheStringConvertible
     func get<Data>() -> Data? where Data: UserCacheStringConvertible
@@ -17,7 +17,7 @@ protocol UserCacheStringConvertible: Codable {
     static var key: String { get }
 }
 
-final class UserCache: UserCachable {
+final class UserCache: UserCacheable {
     
     // TODO: Use keychain
     private let userDefaults: UserDefaults

@@ -69,7 +69,7 @@ struct CoinAmountInputView_Previews: PreviewProvider {
     static var previews: some View {
         CoinAmountInputView(
             viewModel: CoinAmountInputViewModel(
-                coin: CoinResponse(id: "1", name: "bitcoin", symbol: "btc"),
+                coin: CoinResponse(id: "1", name: "bitcoin"),
                 service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
             )
         )

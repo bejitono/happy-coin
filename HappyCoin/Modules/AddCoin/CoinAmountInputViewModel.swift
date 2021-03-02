@@ -17,7 +17,6 @@ final class CoinAmountInputViewModel: ObservableObject {
     @Published var amount: String = "0"
     @Published var navigationState: Int? = NavigationState.viewing
     var coinTitle: String { coin.name }
-    var symbol: String { coin.symbol }
     let inputPriceTitle: String = "Save"
         
     private var digits: [String] = []

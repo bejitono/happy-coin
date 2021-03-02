@@ -21,8 +21,7 @@ struct CoinListView: View {
                 NavigationLink(
                     destination: AddCoinBuilder.coinAmountInputView(
                         id: coin.id,
-                        name: coin.name,
-                        symbol: coin.symbol
+                        name: coin.name
                     )
                 ) {
                     CoinRowView(name: coin.name)

@@ -9,7 +9,7 @@ struct Coin {
     let id: String
     var image: String? = nil
     let name: String
-    let symbol: String
+    var symbol: String
     let numberOfUnits: Double
     var currentPrice: Double? = nil
     var totalValue: Double { numberOfUnits * (currentPrice ?? 0) }
@@ -22,18 +22,18 @@ extension Coin: UserCacheStringConvertible, Codable {
 
 extension Coin {
     
-    init(response: CoinResponse) {
+    init(response: CoinResponse, symbol: String) {
         self.id = response.id
         self.name = response.name
-        self.symbol = response.symbol
+        self.symbol = symbol
         self.numberOfUnits = response.numberOfUnits ?? 0
     }
     
-    init(response: CoinMarketResponse, units: Double) {
+    init(response: CoinMarketResponse, units: Double, symbol: String) {
         self.id = response.id
         self.image = response.image
         self.name = response.name
-        self.symbol = response.symbol
+        self.symbol = symbol
         self.currentPrice = response.currentPrice
         self.numberOfUnits = units
         self.valueIncrease = response.priceChangePercentage24h

@@ -1,5 +1,5 @@
 //
-//  SettingsListView.swift
+//  CurrencySettingsListView.swift
 //  HappyCoin
 //
 //  Created by Stefano on 01.03.21.
@@ -7,32 +7,31 @@
 
 import SwiftUI
 
-struct SettingsListView: View {
+struct CurrencySettingsListView: View {
     
-    @ObservedObject private var viewModel: SettingsListViewModel
+    @ObservedObject private var viewModel: CurrencySettingsListViewModel
         
-    init(viewModel: SettingsListViewModel) {
+    init(viewModel: CurrencySettingsListViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
-        NavigationView {
-            List(viewModel.items, id: \.name) { setting in
-                NavigationLink(
-                    destination: SettingsBuilder.currencySettingsView()
-                ) {
-                    SettingsRowView(name: setting.name)
+        List(viewModel.items, id: \.name) { currency in
+            CurrencySettingsRowView(name: currency.name, selected: currency.selected)
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    viewModel.save(currencyId: currency.id)
                 }
-            }
-            .padding(.horizontal, .padding)
-            .navigationBarTitle(viewModel.title)
         }
+        .padding(.horizontal, .padding)
+        .navigationBarTitle(viewModel.title)
     }
 }
 
-struct SettingsRowView: View {
+struct CurrencySettingsRowView: View {
     
     let name: String
+    let selected: Bool
     
     var body: some View {
         HStack(spacing: .spacing) {
@@ -44,6 +43,8 @@ struct SettingsRowView: View {
                         design: .default
                     )
                 )
+            Spacer()
+            Image(systemName: selected ? "checkmark" : "")
         }
         .padding(.vertical, .itemPadding)
     }

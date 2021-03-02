@@ -65,7 +65,6 @@ struct PriceInputView_Previews: PreviewProvider {
     static var previews: some View {
         PriceInputView(
             viewModel: PriceInputViewModel(
-                symbol: "BTC",
                 service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
             )
         )

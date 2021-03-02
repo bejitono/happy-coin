@@ -7,6 +7,7 @@
 
 struct User {
     var coins: [Coin]
+    var settings: Settings = .defaultSettings
 }
 
 extension User: UserCacheStringConvertible {

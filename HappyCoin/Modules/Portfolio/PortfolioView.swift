@@ -32,7 +32,7 @@ struct PortfolioView: View {
                     }
                     .sheet(isPresented: $settingsFlow.settingsSheet.isPresented,
                            onDismiss: viewModel.getPortfolio) {
-                        SettingsBuilder.currencySettingsView()
+                        SettingsBuilder.settingsView()
                     }
                 }
                 VStack(alignment: .center, spacing: .spacing) {

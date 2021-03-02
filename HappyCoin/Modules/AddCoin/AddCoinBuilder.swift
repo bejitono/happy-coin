@@ -14,25 +14,24 @@ struct AddCoinBuilder {
         return CoinListView(viewModel: viewModel)
     }
     
-    static func coinAmountInputView(id: String, name: String, symbol: String, amount: String? = nil) -> some View {
+    static func coinAmountInputView(id: String, name: String, amount: String? = nil) -> some View {
         let viewModel = CoinAmountInputViewModel(
-            coin: CoinResponse(id: id, name: name, symbol: symbol, numberOfUnits: Double(amount ?? "")),
+            coin: CoinResponse(id: id, name: name, numberOfUnits: Double(amount ?? "")),
             service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
         )
         return CoinAmountInputView(viewModel: viewModel)
     }
     
-    static func coinUpdateAmountInputView(id: String, name: String, symbol: String, amount: String? = nil) -> some View {
+    static func coinUpdateAmountInputView(id: String, name: String, amount: String? = nil) -> some View {
         let viewModel = CoinAmountInputViewModel(
-            coin: CoinResponse(id: id, name: name, symbol: symbol, numberOfUnits: Double(amount ?? "")),
+            coin: CoinResponse(id: id, name: name, numberOfUnits: Double(amount ?? "")),
             service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
         )
         return CoinUpdateAmountInputView(viewModel: viewModel)
     }
     
-    static func priceInputView(symbol: String) -> some View {
+    static func priceInputView() -> some View {
         let viewModel = PriceInputViewModel(
-            symbol: symbol,
             service: CoinService(cache: UserCache(), networkClient: NetworkClientImpl())
         )
         return PriceInputView(viewModel: viewModel)

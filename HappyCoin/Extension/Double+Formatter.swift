@@ -9,11 +9,12 @@ import Foundation
 
 extension Double {
     
-    func toCurrencyString() -> String {
+    func toCurrencyString(symbol: String? = nil) -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US") //.current
         formatter.numberStyle = .currency
         formatter.minimumFractionDigits = isWholeNumber ? 0 : 2
+        formatter.currencySymbol = symbol
         return formatter.string(from: self as NSNumber) ?? ""
     }
     

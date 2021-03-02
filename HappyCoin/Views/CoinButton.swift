@@ -21,6 +21,8 @@ struct CoinButton: View {
                 .minimumScaleFactor(.scaleFactor)
                 .lineLimit(1)
                 .padding(.padding)
+                .frame(maxWidth: .infinity, maxHeight: .height)
+                .contentShape(Rectangle())
         })
         .frame(maxWidth: .infinity, maxHeight: .height)
         .background(Color.gray)

@@ -21,9 +21,9 @@ extension PortfolioListItemViewModel {
         self.id = response.id
         self.image = response.image ?? ""
         self.name = response.name
-        self.currentPrice = (response.currentPrice ?? 0).toCurrencyString()
+        self.currentPrice = (response.currentPrice ?? 0).toCurrencyString(symbol: response.symbol)
         self.numberOfUnits = String(response.numberOfUnits)
-        self.totalValue = response.totalValue.toCurrencyString()
+        self.totalValue = response.totalValue.toCurrencyString(symbol: response.symbol)
         self.valueIncrease = (response.valueIncrease ?? 0).toPercentageString()
     }
 }

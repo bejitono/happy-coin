@@ -35,7 +35,6 @@ struct PortfolioListView: View {
             AddCoinBuilder.coinUpdateAmountInputView(
                 id: coins?.id ?? "",
                 name: coins?.name ?? "",
-                symbol: coins?.name ?? "",
                 amount: coins?.numberOfUnits ?? ""
             )
         }

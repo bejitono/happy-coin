@@ -13,17 +13,13 @@ final class PriceInputViewModel: ObservableObject {
     @Published var amount: String = ""
     let inputPriceTitle: String = "Save"
     let setCurrentPriceTitle: String = "Set current price"
-        
-    private let currencySymbol = "$"
+    
     private var digits: [String] = []
     private let decimal = "."
-    private let symbol: String
     private let service: CoinService
     private var disposables = Set<AnyCancellable>()
     
-    init(symbol: String,
-         service: CoinService) {
-        self.symbol = symbol
+    init(service: CoinService) {
         self.service = service
         update()
     }
@@ -57,7 +53,7 @@ final class PriceInputViewModel: ObservableObject {
 private extension PriceInputViewModel {
     
     func update() {
-        if digits.isEmpty { return amount = currencySymbol + "0" }
-        amount = currencySymbol + digits.joined()
+        if digits.isEmpty { return amount = "0" }
+        amount = digits.joined()
     }
 }

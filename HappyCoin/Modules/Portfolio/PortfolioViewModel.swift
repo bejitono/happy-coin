@@ -35,7 +35,7 @@ final class PortfolioViewModel: ObservableObject {
                         balance: response
                             .map { ($0.currentPrice ?? 0) * $0.numberOfUnits }
                             .reduce(0, +)
-                            .toCurrencyString(),
+                            .toCurrencyString(symbol: response.first?.symbol),
                         valueIncrease: ""
                     )
                 )
@@ -72,7 +72,7 @@ extension PortfolioViewModel: PortfolioListViewModelOutput {
                         balance: response
                             .map { ($0.currentPrice ?? 0) * $0.numberOfUnits }
                             .reduce(0, +)
-                            .toCurrencyString(),
+                            .toCurrencyString(symbol: response.first?.symbol),
                         valueIncrease: ""
                     )
                 )

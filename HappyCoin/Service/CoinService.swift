@@ -29,11 +29,12 @@ final class CoinService {
 extension CoinService: CoinServiceable {
     
     func save(coin: CoinResponse) {
-        let coin = Coin(response: coin)
         guard var user: User = cache.get() else {
+            let coin = Coin(response: coin, symbol: Settings().currencySymbol)
             cache.set(User(coins: [coin]))
             return
         }
+        let coin = Coin(response: coin, symbol: user.settings.currencySymbol)
         if let index = user.coins.firstIndex(where: { $0.id == coin.id }) {
             user.coins[index] = coin
             cache.set(user)
@@ -70,7 +71,3 @@ extension CoinService: CoinServiceable {
         return networkClient.request(with: components)
     }
 }
-
-private let items = [
-    CoinMarketResponse(id: "bitcoin", image: "", name: "bitcoin", symbol: "btc", currentPrice: 12345.99, priceChange24h: 1234, priceChangePercentage24h: 23.23)
-]

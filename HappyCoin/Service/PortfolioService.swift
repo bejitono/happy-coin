@@ -39,7 +39,7 @@ extension PortfolioService: PortfolioFetchable {
         components.host = "api.coingecko.com"
         components.path = "/api/v3/coins/markets"
         components.queryItems = [
-            URLQueryItem(name: "vs_currency", value: "usd"),
+            URLQueryItem(name: "vs_currency", value: user.settings.currencyId),
             URLQueryItem(name: "ids", value: user.coins.compactMap { $0.id }.joined(separator: ",")),
             URLQueryItem(name: "order", value: "market_cap_desc")
         ]
@@ -47,10 +47,13 @@ extension PortfolioService: PortfolioFetchable {
         return publisher
             .map( { [weak self] response -> [Coin] in
                 guard let self = self else { return [] }
-                let user: User? = self.cache.get()
                 self.coins = response.map { coin in
-                    let savedCoin = user?.coins.first(where: { $0.id == coin.id })
-                    return Coin.init(response: coin, units: savedCoin?.numberOfUnits ?? 0.0)
+                    let savedCoin = user.coins.first(where: { $0.id == coin.id })
+                    return Coin(
+                        response: coin,
+                        units: savedCoin?.numberOfUnits ?? 0.0,
+                        symbol: user.settings.currencySymbol
+                    )
                 }
                 return self.coins
             })
