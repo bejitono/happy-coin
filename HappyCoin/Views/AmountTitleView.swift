@@ -12,13 +12,11 @@ struct AmountTitleView: View {
     let title: String
     
     var body: some View {
-        VStack {
-            Text(title)
-                .font(.title3)
-                .fontWeight(.bold)
-                .foregroundColor(.gray)
-                .lineLimit(.lineLimit)
-        }
+        Text(title)
+            .font(.title3)
+            .fontWeight(.bold)
+            .foregroundColor(.gray)
+            .lineLimit(.lineLimit)
     }
 }
 
