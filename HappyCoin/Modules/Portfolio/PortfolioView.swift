@@ -70,6 +70,9 @@ struct PortfolioView: View {
                 }
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            viewModel.getPortfolio()
+        }
     }
 }
 
