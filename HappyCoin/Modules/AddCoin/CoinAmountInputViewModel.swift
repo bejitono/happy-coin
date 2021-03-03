@@ -31,8 +31,11 @@ final class CoinAmountInputViewModel: ObservableObject {
         self.coin = coin
         self.service = service
         
-        if let amount = coin.numberOfUnits {
-            digits = String(amount).compactMap { String($0)  }
+        if let amount = coin.numberOfUnits, !amount.isZero {
+            let amountString = amount.truncatingRemainder(dividingBy: 1) == 0
+                ? String(format: "%.0f", amount)
+                : String(amount)
+            digits = amountString.compactMap { String($0) }
             update()
         }
     }

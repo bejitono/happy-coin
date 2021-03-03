@@ -244,12 +244,12 @@
 			isa = PBXGroup;
 			children = (
 				3D9C6AC725CE546200D45BDC /* AddCoinBuilder.swift */,
-				3D3A966C25CE408F00BD0642 /* CoinListView.swift */,
-				3D3A967125CE409500BD0642 /* CoinListViewModel.swift */,
 				3D3A967625CE412600BD0642 /* CoinListItemViewModel.swift */,
+				3D3A967125CE409500BD0642 /* CoinListViewModel.swift */,
+				3D3A966C25CE408F00BD0642 /* CoinListView.swift */,
+				3DFA7CA825D01C57003D76CF /* CoinAmountInputViewModel.swift */,
 				3DFA7C9925CFAF25003D76CF /* CoinAmountInputView.swift */,
 				3D77284925ECEB2200E51628 /* CoinUpdateAmountInputView.swift */,
-				3DFA7CA825D01C57003D76CF /* CoinAmountInputViewModel.swift */,
 				3D712A1425D03BE900D2B9D7 /* PriceInputView.swift */,
 				3D712A1925D03BF100D2B9D7 /* PriceInputViewModel.swift */,
 			);
