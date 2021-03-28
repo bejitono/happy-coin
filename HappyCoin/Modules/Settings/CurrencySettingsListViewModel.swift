@@ -12,7 +12,14 @@ final class CurrencySettingsListViewModel: ObservableObject {
     let title: String = "Currencies"
     @Published var items: [CurrencySettingsListItemViewModel] = [
         .init(id: "btc", name: "Bitcoin", selected: false),
-        .init(id: "usd", name: "US Dollars", selected: true)
+        .init(id: "usd", name: "US Dollars", selected: true),
+        .init(id: "cny", name: "Chinese Yuan", selected: false),
+        .init(id: "inr", name: "Indian Rupee", selected: false),
+        .init(id: "gbp", name: "British Pounds", selected: false),
+        .init(id: "chf", name: "Swiss Franc", selected: false),
+        .init(id: "eur", name: "Euro", selected: false),
+        .init(id: "sgd", name: "Singapore Dollars", selected: false),
+        .init(id: "thb", name: "Thai Baht", selected: false)
     ]
     
     private let service: SettingsServiceable
