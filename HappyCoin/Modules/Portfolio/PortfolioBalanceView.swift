@@ -44,7 +44,7 @@ private extension CGFloat {
     static let shadowYOffset: CGFloat = 15
     static let shadowXOffset: CGFloat = 0
     static let width: CGFloat = 320
-    static let height: CGFloat = 250
+    static let height: CGFloat = 220
     static let spacing: CGFloat = 25
     static let padding: CGFloat = 30
     static let titleFontSize: CGFloat = 75

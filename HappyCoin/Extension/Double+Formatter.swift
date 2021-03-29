@@ -23,7 +23,7 @@ extension Double {
         formatter.numberStyle = .percent
         formatter.minimumIntegerDigits = 1
         formatter.maximumIntegerDigits = 1
-        formatter.maximumFractionDigits = 3
+        formatter.maximumFractionDigits = 2
         return formatter.string(from: self as NSNumber) ?? ""
     }
     
