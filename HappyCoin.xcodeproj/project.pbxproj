@@ -49,6 +49,8 @@
 		3D7CCFDA25D63AF200E832D6 /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CCFD925D63AF200E832D6 /* PersistentStorage.swift */; };
 		3D865F7F25EDB4ED00D3C5FE /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D865F7E25EDB4ED00D3C5FE /* Settings.swift */; };
 		3D8B871925EC78DB0006E7FA /* PortfolioListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B871825EC78DB0006E7FA /* PortfolioListItemView.swift */; };
+		3D9261792610515800D850BF /* CelebrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9261782610515800D850BF /* CelebrationViewController.swift */; };
+		3D926186261054BD00D850BF /* CelebrationViewController+UIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D926185261054BD00D850BF /* CelebrationViewController+UIViewControllerRepresentable.swift */; };
 		3D95F19A25EB8E2B00785697 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F19925EB8E2B00785697 /* Coin.swift */; };
 		3D95F1A025EBD8ED00785697 /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D95F19F25EBD8ED00785697 /* Double+Formatter.swift */; };
 		3D9C6ABF25CE50E000D45BDC /* KeypadStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */; };
@@ -133,6 +135,8 @@
 		3D7CCFD925D63AF200E832D6 /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
 		3D865F7E25EDB4ED00D3C5FE /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3D8B871825EC78DB0006E7FA /* PortfolioListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioListItemView.swift; sourceTree = "<group>"; };
+		3D9261782610515800D850BF /* CelebrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationViewController.swift; sourceTree = "<group>"; };
+		3D926185261054BD00D850BF /* CelebrationViewController+UIViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CelebrationViewController+UIViewControllerRepresentable.swift"; sourceTree = "<group>"; };
 		3D95F19925EB8E2B00785697 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		3D95F19F25EBD8ED00785697 /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
 		3D9C6ABA25CE50E000D45BDC /* KeypadStringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadStringView.swift; sourceTree = "<group>"; };
@@ -363,6 +367,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		3D9261772610513A00D850BF /* Celebration */ = {
+			isa = PBXGroup;
+			children = (
+				3D9261782610515800D850BF /* CelebrationViewController.swift */,
+				3D926185261054BD00D850BF /* CelebrationViewController+UIViewControllerRepresentable.swift */,
+			);
+			path = Celebration;
+			sourceTree = "<group>";
+		};
 		3D95F19E25EBD8DB00785697 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +387,7 @@
 		3D9C6AB825CE50D000D45BDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D9261772610513A00D850BF /* Celebration */,
 				3D9C6AB925CE50E000D45BDC /* Keyboard */,
 				3DFA7C9E25CFEAC5003D76CF /* AmountView.swift */,
 				3DFA7CA325CFEEC2003D76CF /* AmountTitleView.swift */,
@@ -553,6 +567,7 @@
 				3DFA7CB725D02C68003D76CF /* CoinButton.swift in Sources */,
 				3D865F7F25EDB4ED00D3C5FE /* Settings.swift in Sources */,
 				3D712A1A25D03BF100D2B9D7 /* PriceInputViewModel.swift in Sources */,
+				3D926186261054BD00D850BF /* CelebrationViewController+UIViewControllerRepresentable.swift in Sources */,
 				3D3A967725CE412600BD0642 /* CoinListItemViewModel.swift in Sources */,
 				3D5FBC2C25E681A500C06B11 /* Combine+Decode.swift in Sources */,
 				3D9C6AC025CE50E000D45BDC /* KeypadView.swift in Sources */,
@@ -571,6 +586,7 @@
 				3D3A962F25CE292200BD0642 /* PortfolioBalanceView.swift in Sources */,
 				3D3A962D25CE292200BD0642 /* PortfolioListItemViewModel.swift in Sources */,
 				3D9C6AC125CE50E000D45BDC /* KeypadDigitView.swift in Sources */,
+				3D9261792610515800D850BF /* CelebrationViewController.swift in Sources */,
 				3D683EE725E7DA4C005ACE43 /* UserCache.swift in Sources */,
 				3D62705E25ED3287005FF88B /* CurrencySettingsListView.swift in Sources */,
 				3DFA7C9F25CFEAC5003D76CF /* AmountView.swift in Sources */,
@@ -759,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.StefanoDemicheli.HappyCoinz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -781,7 +797,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Stefano.HappyCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.StefanoDemicheli.HappyCoinz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
