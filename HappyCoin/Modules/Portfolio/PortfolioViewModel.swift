@@ -10,6 +10,7 @@ import Foundation
 
 final class PortfolioViewModel: ObservableObject {
     
+    @Published var happy: Bool?
     @Published var balanceViewModel: PortfolioBalanceViewModel = .empty
     @Published var listViewModel: PortfolioListViewModel
     
@@ -37,7 +38,11 @@ final class PortfolioViewModel: ObservableObject {
                             .reduce(0, +)
                             .toCurrencyString(symbol: response.first?.symbol),
                         valueIncrease: ""
-                    )
+                    ),
+                    happy: response
+                        .compactMap { $0.valueIncrease }
+                        .reduce(0, +)
+                        .sign != .minus
                 )
             }
             .sink { [weak self] completion in
@@ -53,6 +58,7 @@ final class PortfolioViewModel: ObservableObject {
                 self?.listViewModel.items = value.items
                 self?.balanceViewModel.balance = value.balance.balance
                 self?.balanceViewModel.valueIncrease = value.balance.valueIncrease
+                self?.happy = value.happy
             }
             .store(in: &disposables)
     }

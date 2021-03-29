@@ -19,6 +19,7 @@ struct PortfolioView: View {
     
     var body: some View {
         ZStack {
+            CelebrationView(happy: $viewModel.happy)
             VStack(alignment: .center, spacing: .topSpacing) {
                 HStack {
                     Spacer()
@@ -38,6 +39,7 @@ struct PortfolioView: View {
                 VStack(alignment: .center, spacing: .spacing) {
                     PortfolioBalanceView(viewModel: viewModel.balanceViewModel)
                     PortfolioListView(viewModel: viewModel.listViewModel).environmentObject(UpdateCoinFlow())
+                        .cornerRadius(.cornerRadius)
                 }
             }
             .padding(.horizontal)
