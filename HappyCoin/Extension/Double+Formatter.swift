@@ -13,7 +13,11 @@ extension Double {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US") //.current
         formatter.numberStyle = .currency
-        formatter.minimumFractionDigits = isWholeNumber ? 0 : 2
+        if symbol == "₿" {
+            formatter.minimumFractionDigits = 4
+        } else {
+            formatter.minimumFractionDigits = isWholeNumber ? 0 : 2
+        }
         formatter.currencySymbol = symbol
         return formatter.string(from: self as NSNumber) ?? ""
     }
