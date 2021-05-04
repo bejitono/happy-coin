@@ -52,7 +52,7 @@ extension CoinService: CoinServiceable {
         components.queryItems = [
             URLQueryItem(name: "vs_currency", value: "usd"),
             URLQueryItem(name: "order", value: "market_cap_desc"),
-            URLQueryItem(name: "per_page", value: "100"),
+            URLQueryItem(name: "per_page", value: "200"),
             URLQueryItem(name: "page", value: "1")
         ]
         return networkClient.request(with: components)
